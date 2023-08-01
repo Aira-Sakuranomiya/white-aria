@@ -35,16 +35,3 @@ h6,
 p {
 	margin: 0;
 }
-
-$breakpoints: (
-	"sm": "screen and (min-width: 576px)",
-	"md": "screen and (min-width: 768px)",
-	"lg": "screen and (min-width: 992px)",
-	"xl": "screen and (min-width: 1200px)",
-) !default;
-
-@mixin screen($breakpoint) {
-	@media #{map-get($breakpoints, $breakpoint)} {
-		@content;
-	}
-}

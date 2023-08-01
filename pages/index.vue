@@ -4,14 +4,14 @@
 
 <template>
 	<div class="background">
-		<nuxt-img src="images/00622-2969830249.png" />
+		<NuxtImg src="images/00622-2969830249.png" />
 	</div>
 	<div class="header">
 		<h1>桜ノ宮<b>アイラ</b></h1>
 		<h2><b>Kind and Kawaii</b>, Forever!~</h2>
 		<SocialButtons />
 	</div>
-	<nuxt-img src="images/avatar.webp" class="avatar" />
+	<NuxtImg src="images/avatar.webp" class="avatar" />
 </template>
 
 <style scoped lang="scss">
@@ -20,8 +20,9 @@
 
 	.background {
 		position: absolute;
+		right: 0;
+		left: 0;
 		z-index: -1;
-		width: 100%;
 		height: $center;
 		overflow: hidden;
 		pointer-events: none;
@@ -65,6 +66,7 @@
 			position: absolute;
 			top: $center + 2dvh;
 			margin-left: -0.5rem;
+			padding-right: 1rem;
 		}
 	}
 
@@ -78,7 +80,7 @@
 	h1 {
 		display: flex;
 		gap: 0.5em;
-		font-size: 7dvw;
+		font-size: 6dvw;
 		font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", sans-serif;
 		text-shadow: 0 0.05em 0.1em var(--accent-500);
 
@@ -92,7 +94,7 @@
 		font-size: 2dvw;
 		text-shadow: 0 0.05em 0.1em var(--accent-500);
 
-		@include screen(sm) {
+		@include tablet {
 			font-size: 1rem;
 		}
 	}

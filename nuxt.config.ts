@@ -14,6 +14,15 @@ export default defineNuxtConfig({
 		"assets/styles/global.scss",
 		"assets/styles/global-colors.scss"
 	],
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: '@use "@/assets/styles/_mixins.scss" as *;',
+				},
+			},
+		},
+	},
 	app: {
 		head: {
 			link: [
