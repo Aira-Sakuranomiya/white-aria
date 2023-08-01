@@ -44,5 +44,9 @@
 	.social-buttons {
 		display: flex;
 		flex-wrap: wrap;
+
+		a > .button-icon {
+			fill: var(--accent-500);
+		}
 	}
 </style>
