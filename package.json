@@ -1,0 +1,27 @@
+{
+	"name": "nuxt-app",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@nuxt/image": "1.0.0-rc.1",
+		"@types/node": "^18.17.1",
+		"nuxt": "^3.6.5",
+		"sass": "^1.64.2",
+		"stylelint": "^15.10.2",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-config-standard-scss": "^10.0.0",
+		"stylelint-order": "^6.0.3",
+		"stylelint-scss": "^5.0.1"
+	},
+	"dependencies": {
+		"@nuxtjs/svg-sprite": "^1.0.2"
+	}
+}

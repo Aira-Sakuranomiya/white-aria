@@ -1,0 +1,50 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga";
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Montserrat, Inter, Roboto, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		transition-duration: 0s !important;
+		animation-duration: 0s !important;
+	}
+}
+
+// reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+$breakpoints: (
+	"sm": "screen and (min-width: 576px)",
+	"md": "screen and (min-width: 768px)",
+	"lg": "screen and (min-width: 992px)",
+	"xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin screen($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

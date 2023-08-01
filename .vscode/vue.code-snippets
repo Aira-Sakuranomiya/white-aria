@@ -1,0 +1,28 @@
+{
+	"Init Vue Template": {
+		"prefix": ["vue", "init"],
+		"body": [
+			// "<docs>",
+			// "\t",
+			// "</docs>",
+			// "",
+			"<script setup lang=\"ts\">",
+			"\t$0",
+			"</script>",
+			"",
+			"<template>",
+			"\t",
+			"</template>",
+			"",
+			// "<i18n lang=\"json5\">",
+			// "\t",
+			// "</i18n>",
+			// "",
+			"<style scoped lang=\"scss\">",
+			"\t",
+			"</style>",
+			"",
+		],
+		"description": "初始化 Vue 组件模板",
+	}
+}
