@@ -9,12 +9,16 @@
 			<ButtonIcon name="twitter" />
 		</a>
 
+		<a href="https://www.youtube.com/@otomadhero" target="blank">
+			<ButtonIcon name="youtube" />
+		</a>
+
 		<a href="https://space.bilibili.com/22807093" target="_blank">
 			<ButtonIcon name="bilibili" />
 		</a>
 
-		<a href="https://www.youtube.com/@otomadhero" target="blank">
-			<ButtonIcon name="youtube" />
+		<a href="https://www.nicovideo.jp/user/66837079" target="_blank">
+			<ButtonIcon name="niconico" />
 		</a>
 
 		<a href="https://music.163.com/#/user/home?id=86334936" target="blank">
