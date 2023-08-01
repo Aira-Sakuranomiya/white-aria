@@ -15,7 +15,7 @@
 		justify-content: center;
 		width: 3rem;
 		height: 100%;
-		background-color: var(--card-bg);
+		background-color: var(--main-bg);
 		box-shadow: 0 0 1.5rem 0 rgb(var(--accent-500-rgb) / 30%);
 
 		.site-name {

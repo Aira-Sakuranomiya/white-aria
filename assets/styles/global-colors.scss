@@ -4,12 +4,10 @@
 	--hover-overlay: rgb(0 0 0 / 5%);
 	--ripple: var(--hover-overlay);
 	--main-bg: white;
-	--card-bg: white;
 	background-color: var(--main-bg);
 
 	@include dark {
 		--hover-overlay: rgb(255 255 255 / 8%);
 		--main-bg: black;
-		--card-bg: #3c3c3c;
 	}
 }
