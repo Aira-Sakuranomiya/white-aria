@@ -15,3 +15,7 @@
 		@content;
 	}
 }
+
+@mixin content-padding {
+	padding: 5dvw 10dvw;
+}
