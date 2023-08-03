@@ -122,6 +122,7 @@
 			color: white;
 			font-weight: 400;
 			font-size: 10dvw;
+			text-shadow: 0 0.05em 0.1em rgba(var(--accent-500) / 50%);
 		}
 	}
 
