@@ -19,8 +19,8 @@
 </template>
 
 <style scoped lang="scss">
-	$avatar-size: 28dvw;
-	$center: 60dvh;
+	$avatar-size: 28vw;
+	$center: 60vh;
 
 	.background {
 		position: absolute;
@@ -54,12 +54,12 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 0.5dvw;
+		gap: 0.5vw;
 		justify-content: flex-end;
 		height: $center;
-		padding: 0 10dvw;
-		padding-bottom: 3dvw;
-		padding-left: calc(10dvw + $avatar-size + 5dvw);
+		padding: 0 10vw;
+		padding-bottom: 3vw;
+		padding-left: calc(10vw + $avatar-size + 5vw);
 		color: white;
 
 		h1,
@@ -69,7 +69,7 @@
 
 		.social-buttons {
 			position: absolute;
-			top: $center + 2dvh;
+			top: $center + 2vh;
 			margin-left: -0.5rem;
 			padding-right: 1rem;
 		}
@@ -77,8 +77,8 @@
 
 	.avatar {
 		width: $avatar-size;
-		margin-top: -20dvw;
-		margin-left: 10dvw;
+		margin-top: -20vw;
+		margin-left: 10vw;
 		border-radius: 100%;
 	}
 
@@ -86,7 +86,7 @@
 		@include text-shadow;
 		display: flex;
 		gap: 0.5em;
-		font-size: 6dvw;
+		font-size: 6vw;
 		font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", sans-serif;
 
 
@@ -98,7 +98,7 @@
 	h2 {
 		@include text-shadow;
 		margin-left: 0.1em;
-		font-size: 2dvw;
+		font-size: 2vw;
 
 		@include tablet {
 			font-size: 1rem;

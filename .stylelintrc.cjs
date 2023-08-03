@@ -67,7 +67,6 @@ module.exports = {
 			"ignoreAtRules": ["import", "include", "else", "return", "forward", "use", "debug", "extend"],
 		}],
 		"unit-disallowed-list": [
-			"vw", "vh", "vmin", "vmax", // 请使用 dvw、dvh、dvmin、dvmax 代替之。
 			"cm", "mm", "Q", "in", "pc", "pt", "mozmm", // 你觉得这种单位可能合理吗？
 		],
 		"scss/dollar-variable-empty-line-before": null,

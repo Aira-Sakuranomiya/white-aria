@@ -74,11 +74,11 @@
 
 	.content {
 		display: flex;
-		gap: 10dvw;
+		gap: 10vw;
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding-left: 10dvw;
+		padding-left: 10vw;
 		background-color: rgb(var(--accent-500-rgb) / 80%);
 	}
 
@@ -121,8 +121,12 @@
 			max-width: inherit;
 			color: white;
 			font-weight: 400;
-			font-size: 10dvw;
-			text-shadow: 0 0.05em 0.1em rgba(var(--accent-500) / 50%);
+			font-size: 10vw;
+			text-shadow: 0 0.05em 0.1em rgb(var(--accent-500-rgb) / 15%);
+
+			@include phone {
+				display: none;
+			}
 		}
 	}
 
@@ -131,5 +135,10 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: 80% 50%;
+
+		@include tablet {
+			object-position: 62% 50%;
+		}
 	}
 </style>

@@ -14,12 +14,12 @@
 	// 	position: fixed;
 	// 	top: 0;
 	// 	left: 0;
-	// 	height: 100dvh;
+	// 	height: 100vh;
 
 	// 	@include phone {
 	// 		top: unset;
 	// 		bottom: 0;
-	// 		width: 100dvw;
+	// 		width: 100vw;
 	// 		height: 3rem;
 	// 	}
 	// }

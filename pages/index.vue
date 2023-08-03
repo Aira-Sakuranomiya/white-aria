@@ -14,14 +14,14 @@
 
 <style scoped lang="scss">
 	.home-header {
-		height: 100dvh;
+		height: 100vh;
 	}
 
 	section {
 		position: sticky;
 		top: 0;
 		width: 100%;
-		height: 100dvh;
+		height: 100vh;
 		backdrop-filter: blur(8px);
 
 		&:nth-child(1) {
