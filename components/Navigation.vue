@@ -19,6 +19,7 @@
 		box-shadow: 0 0 1.5rem 0 rgb(var(--accent-500-rgb) / 30%);
 
 		.site-name {
+			@include title-font;
 			color: var(--accent-500);
 			font-weight: 600;
 			font-size: 1.5rem;

@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	font-family: Montserrat, Inter, Roboto, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", sans-serif;
+	font-family: "Roboto Flex", Roboto, Inter, "Segoe UI Variable Display", "Segoe UI", Ubuntu, Cantarell, "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans CN", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -33,4 +33,17 @@ h5,
 h6,
 p {
 	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Montserrat, sans-serif;
+}
+
+.material-icons {
+	user-select: none;
 }

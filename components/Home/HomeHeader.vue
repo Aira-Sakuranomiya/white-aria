@@ -10,7 +10,7 @@
 		</div>
 		<div class="header">
 			<h1>桜ノ宮<b>アイラ</b></h1>
-			<p><b>Kind and Kawaii</b>, Forever!~</p>
+			<h2><b>Kind and Kawaii</b>, Forever!~</h2>
 			<SocialButtons />
 		</div>
 		<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.avif"
@@ -63,7 +63,7 @@
 		color: white;
 
 		h1,
-		p {
+		h2 {
 			font-weight: 400;
 		}
 
@@ -83,21 +83,22 @@
 	}
 
 	h1 {
+		@include text-shadow;
 		display: flex;
 		gap: 0.5em;
 		font-size: 6dvw;
 		font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", sans-serif;
-		text-shadow: 0 0.05em 0.1em var(--accent-500);
+
 
 		b {
 			font-weight: 900;
 		}
 	}
 
-	p {
+	h2 {
+		@include text-shadow;
 		margin-left: 0.1em;
 		font-size: 2dvw;
-		text-shadow: 0 0.05em 0.1em var(--accent-500);
 
 		@include tablet {
 			font-size: 1rem;

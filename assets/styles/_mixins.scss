@@ -16,6 +16,10 @@
 	}
 }
 
-@mixin content-padding {
-	padding: 5dvw 10dvw;
+@mixin title-font {
+	font-family: Montserrat, sans-serif;
+}
+
+@mixin text-shadow {
+	text-shadow: 0 0.05em 0.2em var(--accent-500);
 }

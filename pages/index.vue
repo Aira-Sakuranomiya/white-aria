@@ -3,12 +3,33 @@
 </script>
 
 <template>
-	<HomeHeader />
-	<HomeWho />
+	<section>
+		<HomeHeader />
+	</section>
+
+	<section>
+		<HomeWho />
+	</section>
 </template>
 
 <style scoped lang="scss">
 	.home-header {
 		height: 100dvh;
+	}
+
+	section {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: 100dvh;
+		backdrop-filter: blur(8px);
+
+		&:nth-child(1) {
+			backdrop-filter: none;
+		}
+
+		>* {
+			height: 100%;
+		}
 	}
 </style>

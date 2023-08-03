@@ -45,6 +45,10 @@ export default defineNuxtConfig({
 					rel: "stylesheet",
 					href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap",
 				},
+				{
+					rel: "stylesheet",
+					href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+				},
 			],
 		},
 	},
