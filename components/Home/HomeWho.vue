@@ -58,7 +58,7 @@
 
 			<div class="side-img-wrapper">
 				<h2>Who is<br><b>Aira?</b></h2>
-				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" />
+				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="我的照片" />
 			</div>
 
 		</div>
@@ -93,21 +93,13 @@
 		>div {
 			display: flex;
 			flex-direction: column;
-			gap: 2rem;
+			gap: 1.5rem;
 		}
 
 		>div>div {
 			display: flex;
-			gap: 1rem;
+			gap: 0.5rem;
 			align-items: center;
-
-			span:nth-child(1) {
-				font-size: 2.5rem;
-			}
-
-			span:nth-child(2) {
-				font-size: 1.5rem;
-			}
 		}
 	}
 
