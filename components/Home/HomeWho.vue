@@ -78,7 +78,7 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding-left: 10vw;
+		padding-left: 8vw;
 		background-color: rgb(var(--accent-500-rgb) / 80%);
 	}
 

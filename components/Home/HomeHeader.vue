@@ -5,8 +5,7 @@
 <template>
 	<div class="home-header">
 		<div class="background">
-			<NuxtImg
-				src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" />
+			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" />
 		</div>
 		<div class="header">
 			<h1>桜ノ宮<b>アイラ</b></h1>
@@ -57,10 +56,14 @@
 		gap: 0.5vw;
 		justify-content: flex-end;
 		height: $center;
-		padding: 0 10vw;
+		// padding: 0 10vw;
 		padding-bottom: 3vw;
 		padding-left: calc(10vw + $avatar-size + 5vw);
 		color: white;
+
+		@include phone {
+			padding-left: calc(10vw + $avatar-size + 3vw);
+		}
 
 		h1,
 		h2 {
@@ -78,7 +81,7 @@
 	.avatar {
 		width: $avatar-size;
 		margin-top: -20vw;
-		margin-left: 10vw;
+		margin-left: 8vw;
 		border-radius: 100%;
 	}
 
@@ -86,9 +89,12 @@
 		@include text-shadow;
 		display: flex;
 		gap: 0.5em;
-		font-size: 6vw;
-		font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", sans-serif;
+		font-size: 7vw;
+		font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
 
+		@include phone {
+			font-size: 7.5vw;
+		}
 
 		b {
 			font-weight: 900;
