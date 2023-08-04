@@ -9,6 +9,8 @@
 
 			<div class="list">
 
+				<h4>+ Profile +</h4>
+
 				<div>
 					<div>
 						<span class="material-icons">place</span>
@@ -89,6 +91,11 @@
 		flex-shrink: 0;
 		gap: 4rem;
 		color: white;
+
+		>h4 {
+			font-size: 1.5rem;
+			text-align: center;
+		}
 
 		>div {
 			display: flex;
