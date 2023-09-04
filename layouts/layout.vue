@@ -3,33 +3,19 @@
 </script>
 
 <template>
-	<!-- <Navigation class="navigation" /> -->
+	<Navigation class="navigation" />
 	<div class="container">
 		<slot></slot>
 	</div>
 </template>
 
 <style scoped lang="scss">
-	// .navigation {
-	// 	position: fixed;
-	// 	top: 0;
-	// 	left: 0;
-	// 	height: 100vh;
-
-	// 	@include phone {
-	// 		top: unset;
-	// 		bottom: 0;
-	// 		width: 100vw;
-	// 		height: 3rem;
-	// 	}
-	// }
-
-	// .container {
-	// 	padding-left: 3rem;
-
-	// 	@include phone {
-	// 		padding-bottom: 3rem;
-	// 		padding-left: unset;
-	// 	}
-	// }
+	.navigation {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 3rem;
+	}
 </style>

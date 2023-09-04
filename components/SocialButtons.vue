@@ -46,7 +46,7 @@
 		flex-wrap: wrap;
 
 		a>.button-icon {
-			fill: var(--accent-500);
+			fill: white;
 		}
 	}
 </style>

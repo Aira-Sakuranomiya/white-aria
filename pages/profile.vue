@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+	useHead({ title: "My Profile" });
 </script>
 
 <template>
-	<div class="home-who">
+	<div class="page-wrapper">
 
 		<div class="content">
 
@@ -32,27 +32,27 @@
 
 					<div>
 						<span class="material-icons">settings_suggest</span>
-						<span>技术宅</span>
+						<span>Tech</span>
 					</div>
 
 					<div>
 						<span class="material-icons">design_services</span>
-						<span>设计师</span>
+						<span>Design</span>
 					</div>
 
 					<div>
 						<span class="material-icons">local_florist</span>
-						<span>喜欢可爱的东西</span>
+						<span>Cute</span>
 					</div>
 
-					<div>
+					<!-- <div>
 						<span class="material-icons">cancel</span>
 						<span>讨厌可怕的东西</span>
-					</div>
+					</div> -->
 
 					<div>
 						<span class="material-icons">games</span>
-						<span>Minecraft 玩家</span>
+						<span>Minecraft</span>
 					</div>
 				</div>
 
@@ -68,10 +68,12 @@
 </template>
 
 <style scoped lang="scss">
-	.home-who {
+	.page-wrapper {
 		// @include content-padding;
 		display: flex;
 		gap: 3rem;
+		height: 100vh;
+		background-color: var(--accent-500);
 	}
 
 	.content {
@@ -81,7 +83,6 @@
 		justify-content: space-between;
 		height: 100%;
 		padding-left: 8vw;
-		background-color: rgb(var(--accent-500-rgb) / 80%);
 	}
 
 	.list {

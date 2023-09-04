@@ -9,7 +9,7 @@
 				alt="我的人设图片（由AI根据我的人设生成）" />
 		</div>
 		<div class="header">
-			<h1>桜ノ宮<b>アイラ</b></h1>
+			<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt></ruby></b></h1>
 			<h2><b>Kind and Kawaii</b>, Forever!~</h2>
 			<SocialButtons />
 		</div>
@@ -64,6 +64,22 @@
 
 		@include phone {
 			padding-left: calc(10vw + $avatar-size + 3vw);
+		}
+
+		h1 {
+			display: flex;
+			align-items: baseline;
+
+			ruby {
+				font-family: Montserrat, sans-serif;
+
+				& > rt {
+					font-size: 0.3em;
+					letter-spacing: 1em;
+					text-align: center;
+					text-indent: 1em;
+				}
+			}
 		}
 
 		h1,
