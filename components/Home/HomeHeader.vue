@@ -5,7 +5,7 @@
 <template>
 	<div class="home-header">
 		<div class="background">
-			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" />
+			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" alt="Background" />
 		</div>
 		<div class="header">
 			<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt></ruby></b></h1>
@@ -13,7 +13,7 @@
 			<SocialButtons />
 		</div>
 		<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
-			class="avatar" />
+			class="avatar" alt="My avatar" />
 	</div>
 </template>
 
