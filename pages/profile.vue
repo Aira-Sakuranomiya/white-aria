@@ -60,7 +60,7 @@
 
 			<div class="side-img-wrapper">
 				<h2>Who is<br><b>Aira?</b></h2>
-				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="我的照片" />
+				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me" />
 			</div>
 
 		</div>
