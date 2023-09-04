@@ -57,7 +57,7 @@
 		justify-content: flex-end;
 		height: $center;
 		// padding: 0 10vw;
-		padding-bottom: 3vw;
+		padding-bottom: 2vw;
 		padding-left: calc(10vw + $avatar-size + 5vw);
 		color: white;
 
