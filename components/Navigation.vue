@@ -70,8 +70,8 @@
 			display: flex;
 			align-items: center;
 			height: 100%;
+			margin-right: 4px;
 			// padding: 0 $lr-padding;
-			margin-right: 0.5rem;
 			font-family: Montserrat, sans-serif;
 			filter: drop-shadow(0 0 5px rgb(var(--accent-500-rgb) / 100%));
 
@@ -81,7 +81,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 100%;
-				padding: 0 0.5rem;
+				padding: 0 12px;
 				color: rgb(255 255 255 / 70%);
 				text-decoration: none;
 
