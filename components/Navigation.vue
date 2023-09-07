@@ -10,14 +10,20 @@
 			</NuxtLink>
 		</div>
 		<div class="right">
-			<NuxtLink to="/profile">Profile</NuxtLink>
-			<NuxtLink to="/links">Links</NuxtLink>
+			<NuxtLink to="/profile">
+				<span class="material-icons">person</span>
+				Profile
+			</NuxtLink>
+			<NuxtLink to="/links">
+				<span class="material-icons">link</span>
+				Links
+			</NuxtLink>
 		</div>
 	</div>
 </template>
 
 <style scoped lang="scss">
-	$lr-padding: 1.5rem;
+	$lr-padding: 1rem;
 
 	.navigation {
 		display: flex;
@@ -38,19 +44,27 @@
 
 		.right {
 			display: flex;
-			gap: 3rem;
 			align-items: center;
 			height: 100%;
-			padding: 0 $lr-padding;
+			// padding: 0 $lr-padding;
+			font-family: Montserrat, sans-serif;
 			filter: drop-shadow(0 0 5px rgb(var(--accent-500-rgb) / 100%));
 
 			a {
+				display: flex;
+				gap: 4px;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				padding: 0 $lr-padding;
 				color: rgb(255 255 255 / 70%);
 				text-decoration: none;
 
 				&::after {
+					position: absolute;
+					bottom: 0;
 					display: block;
-					width: 100%;
+					width: 24px;
 					height: 2px;
 					margin-top: 3px;
 					background-color: white;
@@ -63,7 +77,7 @@
 					color: white;
 
 					&::after {
-						transform: scaleX(0.5);
+						transform: scaleX(1);
 					}
 				}
 			}

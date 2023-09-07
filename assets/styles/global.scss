@@ -11,6 +11,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 	font-size: 16px;
 	font-family: -apple-system, BlinkMacSystemFont, "Roboto Flex", Roboto, Inter, "Segoe UI Variable Display", "Segoe UI", Ubuntu, Cantarell, "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans CN", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
 }
@@ -69,11 +70,11 @@ a {
 }
 
 .page-enter-from {
-	transform: translateY(-8rem);
+	transform: translateX(8rem);
 	opacity: 0;
 }
 
 .page-leave-to {
-	transform: translateY(-2rem);
+	transform: translateX(-2rem);
 	opacity: 0;
 }

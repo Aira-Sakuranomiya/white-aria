@@ -82,7 +82,10 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding-left: 8vw;
+
+		@include phone {
+			gap: 0;
+		}
 	}
 
 	.list {
@@ -91,6 +94,7 @@
 		flex-direction: column;
 		flex-shrink: 0;
 		gap: 4rem;
+		padding-left: 8vw;
 		color: white;
 
 		>h4 {
@@ -109,6 +113,11 @@
 			gap: 0.5rem;
 			align-items: center;
 		}
+
+		@include phone {
+			width: 50%;
+			padding: 0 8vw;
+		}
 	}
 
 	.side-img-wrapper {
@@ -124,9 +133,18 @@
 			font-size: 10vw;
 			text-shadow: 0 0.05em 0.1em rgb(var(--accent-500-rgb) / 15%);
 
+			@include tablet {
+				display: none;
+			}
+
 			@include phone {
 				display: none;
 			}
+		}
+
+		@include phone {
+			flex-shrink: 0;
+			width: 50%;
 		}
 	}
 
@@ -137,7 +155,7 @@
 		object-fit: cover;
 		object-position: 80% 50%;
 
-		@include tablet {
+		@include phone {
 			object-position: 62% 50%;
 		}
 	}

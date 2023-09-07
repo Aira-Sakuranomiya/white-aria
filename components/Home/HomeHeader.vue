@@ -67,13 +67,18 @@
 
 		h1 {
 			display: flex;
-			align-items: baseline;
+			align-items: flex-end;
 
 			ruby {
+				display: inline-flex;
+				flex-direction: column-reverse;
 				font-family: Montserrat, sans-serif;
 
-				& > rt {
+				rb, rt {
+					display: inline;
+					margin-bottom: -0.5em;
 					font-size: 0.3em;
+					line-height: 1;
 					letter-spacing: 1em;
 					text-align: center;
 					text-indent: 1em;
