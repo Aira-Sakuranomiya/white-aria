@@ -53,7 +53,6 @@
 
 		.left {
 			height: 100%;
-			margin-left: $lr-padding;
 
 			a {
 				display: flex;
@@ -62,6 +61,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 100%;
+				padding: 0 $lr-padding;
 				color: white;
 			}
 		}
