@@ -45,6 +45,10 @@
 			@include title-font;
 			font-weight: 600;
 			font-size: 1.5rem;
+
+			@include phone {
+				display: none;
+			}
 		}
 
 		.left {
@@ -59,12 +63,6 @@
 				justify-content: center;
 				height: 100%;
 				color: white;
-
-				@include small {
-					svg {
-						display: none;
-					}
-				}
 			}
 		}
 
