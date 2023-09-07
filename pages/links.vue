@@ -4,12 +4,13 @@
 
 <template>
 	<div class="page-wrapper">
-		<h4>+ Links +</h4>
+		<h4>+ Friends' Sites +</h4>
 		<div class="links">
-			<a href="https://aliv.life/">alivemaster</a>
 			<a href="https://lachrymal.net">lachrymaL</a>
+			<a href="https://aliv.life/">alivemaster</a>
 			<a href="https://megakite.icu">megakite</a>
 			<a href="https://akutazehy.github.io">Akuta Zehy</a>
+			<a href="https://ali-a.cn/">熊可狸</a>
 		</div>
 	</div>
 </template>

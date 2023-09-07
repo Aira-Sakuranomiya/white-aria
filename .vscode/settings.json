@@ -24,7 +24,8 @@
 		"postcss",
 		"sass",
 		"scss",
-		"vue"
+		"vue",
+		"html"
 	],
 	"stylelint.validate": [
 		"css",

@@ -10,6 +10,12 @@
 	}
 }
 
+@mixin small {
+	@media screen and (width <=400px) {
+		@content;
+	}
+}
+
 @mixin dark {
 	@media (prefers-color-scheme: dark) {
 		@content;

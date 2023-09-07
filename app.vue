@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	useHead({
-		titleTemplate: "%s - AIRA HOME",
+		titleTemplate: "%s - AIRA",
 	})
 </script>
 

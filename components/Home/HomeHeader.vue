@@ -8,7 +8,8 @@
 			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" alt="Background" />
 		</div>
 		<div class="header">
-			<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt></ruby></b></h1>
+			<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt>
+			<rt>艾了个拉</rt></ruby></b></h1>
 			<h2><b>Kind and Kawaii</b>, Forever!~</h2>
 			<SocialButtons />
 		</div>
@@ -76,12 +77,20 @@
 
 				rb, rt {
 					display: inline;
-					margin-bottom: -0.5em;
 					font-size: 0.3em;
 					line-height: 1;
 					letter-spacing: 1em;
 					text-align: center;
 					text-indent: 1em;
+
+					&:nth-child(1) {
+						margin-bottom: -0.5em;
+					}
+
+					&:nth-child(2) {
+						margin-bottom: 0.5em;
+						font-size: 0.24em;
+					}
 				}
 			}
 		}
@@ -110,11 +119,11 @@
 		@include text-shadow;
 		display: flex;
 		gap: 0.5em;
-		font-size: 7vw;
+		font-size: 7.5vw;
 		font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
 
 		@include phone {
-			font-size: 7.5vw;
+			font-size: 8.2vw;
 		}
 
 		b {

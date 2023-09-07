@@ -24,12 +24,12 @@
 		transition: background-color 0.2s;
 
 		.icon {
-			width: 36px;
-			height: 36px;
+			width: 30px;
+			height: 30px;
 		}
 
 		&:hover {
-			background-color: var(--hover-overlay);
+			background-color: var(--hover-overlay-light);
 		}
 	}
 </style>

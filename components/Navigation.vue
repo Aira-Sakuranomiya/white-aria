@@ -6,7 +6,14 @@
 	<div class="navigation">
 		<div class="left">
 			<NuxtLink to="/">
+				<span class="material-icons">local_cafe</span>
 				<span class="site-name">AIRA CAFÉ</span>
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M19.1803 4.6723L6.43807 12.6737L4.81968 10.0964L17.5619 2.09503L19.1803 4.6723Z" fill="white" />
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M19.1803 13.9036L6.43807 21.905L4.81968 19.3277L17.5619 11.3263L19.1803 13.9036Z" fill="white" />
+				</svg>
 			</NuxtLink>
 		</div>
 		<div class="right">
@@ -36,10 +43,29 @@
 
 		.site-name {
 			@include title-font;
-			margin-left: $lr-padding;
-			color: white;
 			font-weight: 600;
 			font-size: 1.5rem;
+		}
+
+		.left {
+			height: 100%;
+			margin-left: $lr-padding;
+
+			a {
+				display: flex;
+				flex-shrink: 0;
+				gap: 4px;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				color: white;
+
+				@include small {
+					svg {
+						display: none;
+					}
+				}
+			}
 		}
 
 		.right {
@@ -47,6 +73,7 @@
 			align-items: center;
 			height: 100%;
 			// padding: 0 $lr-padding;
+			margin-right: 0.5rem;
 			font-family: Montserrat, sans-serif;
 			filter: drop-shadow(0 0 5px rgb(var(--accent-500-rgb) / 100%));
 
@@ -56,7 +83,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 100%;
-				padding: 0 $lr-padding;
+				padding: 0 0.5rem;
 				color: rgb(255 255 255 / 70%);
 				text-decoration: none;
 

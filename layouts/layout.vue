@@ -15,7 +15,7 @@
 		top: 0;
 		left: 0;
 		z-index: 100;
-		width: 100%;
+		width: 100dvw;
 		height: 3rem;
 	}
 </style>
