@@ -19,7 +19,7 @@
 	.page-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 4rem;
 		align-items: center;
 		justify-content: center;
 		height: 100vh;
@@ -36,12 +36,12 @@
 	.links {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
 		align-items: center;
 		justify-content: center;
 		padding: 0 10vw;
 
 		a {
+			padding: 1.5rem 0;
 			color: white;
 			text-decoration: underline;
 
