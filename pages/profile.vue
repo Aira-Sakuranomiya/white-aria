@@ -45,10 +45,10 @@
 						<span>Cute</span>
 					</div>
 
-					<!-- <div>
-						<span class="material-icons">cancel</span>
-						<span>讨厌可怕的东西</span>
-					</div> -->
+					<div>
+							<span class="material-icons">music_note</span>
+							<span>Otomad</span>
+					</div>
 
 					<div>
 						<span class="material-icons">games</span>
