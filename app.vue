@@ -11,3 +11,30 @@
 		</NuxtLayout>
 	</div>
 </template>
+
+<style lang="scss">
+	/* fallback */
+	@font-face {
+		font-weight: 400;
+		font-family: "Material Icons";
+		font-style: normal;
+		font-display: block;
+		src: url("https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2") format("woff2");
+	}
+
+	.material-icons {
+		display: inline-block;
+		font-weight: normal;
+		font-size: 24px;
+		font-family: "Material Icons";
+		font-style: normal;
+		line-height: 1;
+		direction: ltr;
+		letter-spacing: normal;
+		white-space: nowrap;
+		text-transform: none;
+		word-wrap: normal;
+		font-feature-settings: "liga";
+		-webkit-font-smoothing: antialiased;
+	}
+</style>
