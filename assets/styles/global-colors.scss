@@ -6,7 +6,7 @@
 	--ripple: var(--hover-overlay);
 	--main-bg: white;
 	--icon: #797173;
-	background-color: var(--accent-500);
+	background-color: var(--main-bg);
 
 	@include dark {
 		--hover-overlay: rgb(255 255 255 / 8%);

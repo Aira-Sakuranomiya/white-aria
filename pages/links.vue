@@ -11,6 +11,7 @@
 			<a href="https://megakite.icu">megakite</a>
 			<a href="https://akutazehy.github.io">Akuta Zehy</a>
 			<a href="https://ali-a.cn/">熊可狸</a>
+			<a href="https://wzq02.cf/">wzq02</a>
 		</div>
 	</div>
 </template>

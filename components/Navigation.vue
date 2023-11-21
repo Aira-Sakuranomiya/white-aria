@@ -73,7 +73,7 @@
 			margin-right: 4px;
 			// padding: 0 $lr-padding;
 			font-family: Montserrat, sans-serif;
-			filter: drop-shadow(0 0 5px rgb(var(--accent-500-rgb) / 100%));
+			filter: drop-shadow(0 0 2px rgb(var(--accent-500-rgb) / 100%)) drop-shadow(0 0 6px rgb(var(--accent-500-rgb) / 100%));
 
 			a {
 				display: flex;
