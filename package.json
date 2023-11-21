@@ -9,9 +9,9 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxt/image": "^1.0.0",
-		"@types/node": "^18.18.9",
-		"nuxt": "^3.8.1",
+		"@nuxt/image": "^1.1.0",
+		"@types/node": "^18.18.11",
+		"nuxt": "^3.8.2",
 		"sass": "^1.69.5",
 		"stylelint": "^15.11.0",
 		"stylelint-config-rational-order": "^0.1.2",
