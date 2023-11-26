@@ -122,6 +122,10 @@
 			color: var(--accent-500);
 			font-size: 1.5rem;
 			text-align: center;
+
+			@include dark {
+				@include small-text-shadow;
+			}
 		}
 
 		>div {

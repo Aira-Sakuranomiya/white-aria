@@ -29,3 +29,7 @@
 @mixin text-shadow {
 	text-shadow: 0 0.05em 0.2em var(--accent-500);
 }
+
+@mixin small-text-shadow {
+	text-shadow: 0 0.05em 0.8em var(--accent-500);
+}

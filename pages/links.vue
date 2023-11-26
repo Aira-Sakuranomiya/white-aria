@@ -32,6 +32,10 @@
 		font-size: 1.5rem;
 		text-align: center;
 		animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+
+		@include dark {
+			@include small-text-shadow;
+		}
 	}
 
 	@keyframes link-intro {

@@ -64,6 +64,11 @@
 			background-color: var(--accent-500);
 			opacity: 0.8;
 			content: "";
+
+			@include dark {
+				background-color: hsl(from var(--accent-500) h calc(s - 0.4) calc(l - 0.3));
+				opacity: 0.85;
+			}
 		}
 	}
 
@@ -173,6 +178,10 @@
 
 		@include phone {
 			margin-bottom: 20vw;
+		}
+
+		@include dark {
+			filter: drop-shadow(0 0.05rem 2rem rgb(var(--accent-500-rgb) / 80%));
 		}
 	}
 
