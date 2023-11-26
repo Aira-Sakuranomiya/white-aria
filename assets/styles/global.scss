@@ -61,20 +61,20 @@ a {
 	box-shadow: 0 0 1.5rem 0 rgb(var(--accent-500-rgb) / 30%);
 }
 
-.page-enter-active {
-	transition: all 0.6s cubic-bezier(0.1, 0.9, 0.2, 1);
-}
+// .page-enter-active {
+// 	transition: all 0.6s cubic-bezier(0.1, 0.9, 0.2, 1);
+// }
 
 .page-leave-active {
 	transition: all 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
-.page-enter-from {
-	transform: translateX(8rem);
-	opacity: 0;
-}
+// .page-enter-from {
+// 	transform: translateY(8rem);
+// 	opacity: 0;
+// }
 
 .page-leave-to {
-	transform: translateX(-2rem);
+	transform: translateY(-8rem);
 	opacity: 0;
 }

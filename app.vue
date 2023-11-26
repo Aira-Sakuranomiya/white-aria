@@ -16,17 +16,17 @@
 	/* fallback */
 	@font-face {
 		font-weight: 400;
-		font-family: "Material Icons";
+		font-family: "Material Icons Round";
 		font-style: normal;
 		font-display: block;
-		src: url("https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2") format("woff2");
+		src: url("https://fonts.gstatic.com/s/materialiconsround/v108/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmPq_HTTw.woff2") format("woff2");
 	}
 
 	.material-icons {
 		display: inline-block;
 		font-weight: normal;
 		font-size: 24px;
-		font-family: "Material Icons";
+		font-family: "Material Icons Round";
 		font-style: normal;
 		line-height: 1;
 		direction: ltr;

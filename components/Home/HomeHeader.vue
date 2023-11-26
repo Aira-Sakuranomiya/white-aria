@@ -5,16 +5,22 @@
 <template>
 	<div class="home-header">
 		<div class="background">
-			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp" alt="Background" />
+			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp"
+				alt="Background" />
 		</div>
 		<div class="header">
-			<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt>
-			<rt>艾了个拉</rt></ruby></b></h1>
-			<h2><b>Kind and Kawaii</b>, Forever!~</h2>
-			<SocialButtons />
+			<div class="left">
+				<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
+					class="avatar" alt="My avatar" />
+			</div>
+			<div class="right">
+				<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt>
+							<rt>艾了个拉</rt>
+						</ruby></b></h1>
+				<h2><b>Kind and Kawaii</b>, Forever!~</h2>
+				<SocialButtons />
+			</div>
 		</div>
-		<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
-			class="avatar" alt="My avatar" />
 	</div>
 </template>
 
@@ -29,7 +35,18 @@
 		z-index: -1;
 		height: $center;
 		overflow: hidden;
+		animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) both bg-intro;
 		pointer-events: none;
+
+		@keyframes bg-intro {
+			from {
+				height: 0;
+			}
+
+			to {
+				height: $center;
+			}
+		}
 
 		img {
 			display: block;
@@ -50,32 +67,52 @@
 		}
 	}
 
+	@keyframes move-in {
+		from {
+			opacity: 0;
+			translate: 50vw 0;
+		}
+	}
+
 	.header {
 		position: relative;
 		display: flex;
-		flex-direction: column;
-		gap: 0.5vw;
-		justify-content: flex-end;
+		gap: 2rem;
+		align-items: flex-end;
+		justify-content: center;
 		height: $center;
-		// padding: 0 10vw;
-		padding-bottom: 2vw;
-		padding-left: calc(10vw + $avatar-size + 5vw);
 		color: white;
 
 		@include phone {
-			padding-left: calc(10vw + $avatar-size + 3vw);
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.left {
+			display: flex;
+			transform: translateY(30%);
+		}
+
+		.right {
+			margin-bottom: 2rem;
 		}
 
 		h1 {
 			display: flex;
 			align-items: flex-end;
+			animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) 0.4s both move-in;
+
+			b {
+				display: flex;
+			}
 
 			ruby {
 				display: inline-flex;
 				flex-direction: column-reverse;
 				font-family: Montserrat, sans-serif;
 
-				rb, rt {
+				rb,
+				rt {
 					display: inline;
 					font-size: 0.3em;
 					line-height: 1;
@@ -95,6 +132,10 @@
 			}
 		}
 
+		h2 {
+			animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) 0.5s both move-in;
+		}
+
 		h1,
 		h2 {
 			font-weight: 400;
@@ -105,14 +146,34 @@
 			top: $center + 2vh;
 			margin-left: -0.5rem;
 			padding-right: 1rem;
+
+			@include phone {
+				right: 0;
+				left: 0;
+				margin: 0;
+				padding: 10vw;
+			}
 		}
 	}
 
 	.avatar {
 		width: $avatar-size;
-		margin-top: -20vw;
-		margin-left: 8vw;
 		border-radius: 100%;
+		animation: 0.6s cubic-bezier(0.26, 1.44, 0.4, 1.0) both avatar-intro;
+
+		@keyframes avatar-intro {
+			from {
+				scale: 0;
+			}
+
+			to {
+				scale: 1;
+			}
+		}
+
+		@include phone {
+			margin-bottom: 20vw;
+		}
 	}
 
 	h1 {

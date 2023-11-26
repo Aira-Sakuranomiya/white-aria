@@ -41,12 +41,31 @@
 </template>
 
 <style scoped lang="scss">
+	@keyframes social-button-anim {
+		from {
+			transform: translateX(80vw);
+			opacity: 0;
+			scale: 0;
+		}
+	}
+
 	.social-buttons {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+
+		a {
+			animation: social-button-anim 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+		}
 
 		a>.button-icon {
-			fill: white;
+			fill: var(--accent-500);
+		}
+	}
+
+	@for $i from 1 through 8 {
+		.social-buttons a:nth-child(#{$i}) {
+			animation-delay: calc($i / 20 + 0.7) + s !important;
 		}
 	}
 </style>

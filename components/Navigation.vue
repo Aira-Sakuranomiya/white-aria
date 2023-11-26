@@ -1,18 +1,19 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
-	<div class="navigation">
+	<div :class="{ 'home': $route.path == '/' }">
 		<div class="left">
 			<NuxtLink to="/">
 				<span class="material-icons">local_cafe</span>
 				<span class="site-name">AIRA CAFÉ</span>
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M19.1803 4.6723L6.43807 12.6737L4.81968 10.0964L17.5619 2.09503L19.1803 4.6723Z" fill="white" />
+						d="M19.1803 4.6723L6.43807 12.6737L4.81968 10.0964L17.5619 2.09503L19.1803 4.6723Z"
+						fill="var(--nav-left-color)" />
 					<path fill-rule="evenodd" clip-rule="evenodd"
-						d="M19.1803 13.9036L6.43807 21.905L4.81968 19.3277L17.5619 11.3263L19.1803 13.9036Z" fill="white" />
+						d="M19.1803 13.9036L6.43807 21.905L4.81968 19.3277L17.5619 11.3263L19.1803 13.9036Z"
+						fill="var(--nav-left-color)" />
 				</svg>
 			</NuxtLink>
 		</div>
@@ -33,13 +34,17 @@
 	$lr-padding: 1rem;
 
 	.navigation {
+		--nav-left-color: var(--accent-500);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		height: 3rem;
-		// background-color: var(--accent-500);
 		// box-shadow: 0 0 1.5rem 0 rgb(var(--accent-500-rgb) / 30%);
+
+		&.home {
+			--nav-left-color: white;
+		}
 
 		.site-name {
 			@include title-font;
@@ -62,7 +67,7 @@
 				justify-content: center;
 				height: 100%;
 				padding: 0 $lr-padding;
-				color: white;
+				color: var(--nav-left-color);
 			}
 		}
 
@@ -71,9 +76,7 @@
 			align-items: center;
 			height: 100%;
 			margin-right: 4px;
-			// padding: 0 $lr-padding;
 			font-family: Montserrat, sans-serif;
-			filter: drop-shadow(0 0 2px rgb(var(--accent-500-rgb) / 100%)) drop-shadow(0 0 6px rgb(var(--accent-500-rgb) / 100%));
 
 			a {
 				display: flex;
@@ -82,7 +85,7 @@
 				justify-content: center;
 				height: 100%;
 				padding: 0 12px;
-				color: rgb(255 255 255 / 70%);
+				color: hsl(from var(--accent-500) h s calc(l + 0.2));
 				text-decoration: none;
 
 				&::after {
@@ -92,14 +95,14 @@
 					width: 24px;
 					height: 2px;
 					margin-top: 3px;
-					background-color: white;
+					background-color: var(--accent-500);
 					transform: scaleX(0);
 					transition: transform 0.6s;
 					content: "";
 				}
 
 				&.router-link-active {
-					color: white;
+					color: var(--accent-500);
 
 					&::after {
 						transform: scaleX(1);

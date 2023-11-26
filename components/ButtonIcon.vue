@@ -21,7 +21,7 @@
 		overflow: hidden;
 		border-radius: 100%;
 		cursor: pointer;
-		transition: background-color 0.2s;
+		transition: 0.2s;
 
 		.icon {
 			width: 30px;
@@ -29,7 +29,7 @@
 		}
 
 		&:hover {
-			background-color: var(--hover-overlay-light);
+			transform: scale(1.25);
 		}
 	}
 </style>

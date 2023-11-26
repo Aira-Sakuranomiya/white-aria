@@ -11,49 +11,48 @@
 
 				<h4>+ Profile +</h4>
 
+				<hr />
+
 				<div>
-					<div>
-						<span class="material-icons">place</span>
-						<span>Shanghai</span>
-					</div>
-
-					<div>
-						<span class="material-icons">cake</span>
-						<span>2003/12/24</span>
-					</div>
-
-					<div>
-						<span class="material-icons">transgender</span>
-						<span>she / her</span>
-					</div>
+					<span class="material-icons">place</span>
+					<span>Shanghai</span>
 				</div>
 
 				<div>
+					<span class="material-icons">cake</span>
+					<span>2003/12/24</span>
+				</div>
 
-					<div>
-						<span class="material-icons">settings_suggest</span>
-						<span>Tech</span>
-					</div>
+				<div>
+					<span class="material-icons">transgender</span>
+					<span>she / her</span>
+				</div>
 
-					<div>
-						<span class="material-icons">design_services</span>
-						<span>Design</span>
-					</div>
+				<hr />
 
-					<div>
-						<span class="material-icons">local_florist</span>
-						<span>Cute</span>
-					</div>
+				<div>
+					<span class="material-icons">settings_suggest</span>
+					<span>Tech</span>
+				</div>
 
-					<div>
-							<span class="material-icons">music_note</span>
-							<span>Otomad</span>
-					</div>
+				<div>
+					<span class="material-icons">design_services</span>
+					<span>Design</span>
+				</div>
 
-					<div>
-						<span class="material-icons">games</span>
-						<span>Minecraft</span>
-					</div>
+				<div>
+					<span class="material-icons">local_florist</span>
+					<span>Cute</span>
+				</div>
+
+				<div>
+					<span class="material-icons">music_note</span>
+					<span>Otomad</span>
+				</div>
+
+				<div>
+					<span class="material-icons">games</span>
+					<span>Minecraft</span>
 				</div>
 
 			</div>
@@ -73,12 +72,10 @@
 		display: flex;
 		gap: 3rem;
 		height: 100vh;
-		background-color: var(--accent-500);
 	}
 
 	.content {
 		display: flex;
-		gap: 10vw;
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
@@ -88,30 +85,50 @@
 		}
 	}
 
+	@keyframes list-intro {
+		from {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes list-item-intro {
+		from {
+			transform: translateX(-150%);
+		}
+	}
+
+	@for $i from 1 through 8 {
+		.list>div:nth-of-type(#{$i}) {
+			animation-delay: calc($i / 20) + s !important;
+		}
+	}
+
 	.list {
-		@include text-shadow;
+		// @include text-shadow;
 		display: flex;
 		flex-direction: column;
 		flex-shrink: 0;
-		gap: 4rem;
-		padding-left: 8vw;
-		color: white;
+		gap: 1.5rem;
+		padding: 0 8vw;
+		color: var(--icon);
+		animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards list-intro;
+
+		hr {
+			margin: 0;
+			visibility: hidden;
+		}
 
 		>h4 {
+			color: var(--accent-500);
 			font-size: 1.5rem;
 			text-align: center;
 		}
 
 		>div {
 			display: flex;
-			flex-direction: column;
-			gap: 1.5rem;
-		}
-
-		>div>div {
-			display: flex;
 			gap: 0.5rem;
 			align-items: center;
+			animation: 0.6s cubic-bezier(0.1, 0.9, 0.2, 1) backwards list-item-intro;
 		}
 
 		@include phone {
@@ -120,10 +137,24 @@
 		}
 	}
 
+	@keyframes side-img-wrapper-intro {
+		from {
+			transform: translateX(100%);
+			// filter: blur(100rem);
+		}
+	}
+
+	@keyframes opacity-intro {
+		from {
+			opacity: 0;
+		}
+	}
+
 	.side-img-wrapper {
 		position: relative;
-		flex-grow: 1;
+		width: 100%;
 		height: 100%;
+		animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards side-img-wrapper-intro;
 
 		h2 {
 			position: absolute;

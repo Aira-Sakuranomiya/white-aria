@@ -20,18 +20,30 @@
 	.page-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
+		gap: 3rem;
 		align-items: center;
 		justify-content: center;
 		height: 100vh;
 		padding-top: 0 !important;
-		background-color: var(--accent-500);
 	}
 
 	h4 {
-		color: white;
+		color: var(--accent-500);
 		font-size: 1.5rem;
 		text-align: center;
+		animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+	}
+
+	@keyframes link-intro {
+		from {
+			transform: translateY(100vh);
+		}
+	}
+
+	@for $i from 1 through 8 {
+		.links a:nth-of-type(#{$i}) {
+			animation-delay: calc($i / 20) + s !important;
+		}
 	}
 
 	.links {
@@ -43,10 +55,13 @@
 
 		a {
 			padding: 1.5rem 0;
-			color: white;
-			text-decoration: underline;
+			color: var(--accent-500);
+			text-decoration: none;
+			transition: 0.2s;
+			animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 
 			&:hover {
+				transform: scale(1.1);
 				opacity: 0.5;
 			}
 		}
