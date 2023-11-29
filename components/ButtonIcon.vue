@@ -6,7 +6,7 @@
 
 <template>
 	<div class="button-icon">
-		<svg-icon :name="name" class="icon" />
+		<NuxtIcon :name="name" class="icon" />
 	</div>
 </template>
 
@@ -23,8 +23,7 @@
 		transition: 0.2s;
 
 		.icon {
-			width: 30px;
-			height: 30px;
+			font-size: 30px;
 
 			@include dark {
 				filter: drop-shadow(0 0.05em 0.8em var(--accent-500));

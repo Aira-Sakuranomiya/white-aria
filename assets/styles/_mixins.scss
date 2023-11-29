@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin small-tablet {
+	@media screen and (width <=719px) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media screen and (width <= 992px) {
 		@content;

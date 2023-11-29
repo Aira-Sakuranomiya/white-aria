@@ -59,13 +59,13 @@
 		}
 
 		a>.button-icon {
-			fill: var(--accent-500);
+			color: var(--accent-500);
 		}
 	}
 
 	@for $i from 1 through 8 {
 		.social-buttons a:nth-child(#{$i}) {
-			animation-delay: calc($i / 20 + 0.7) + s !important;
+			animation-delay: calc($i / 20 + 0.65) + s !important;
 		}
 	}
 </style>

@@ -65,7 +65,7 @@
 			animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 
 			&:hover {
-				transform: scale(1.1);
+				scale: 1.1;
 				opacity: 0.5;
 			}
 		}

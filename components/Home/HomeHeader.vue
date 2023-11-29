@@ -10,8 +10,10 @@
 		</div>
 		<div class="header">
 			<div class="left">
-				<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
-					class="avatar" alt="My avatar" />
+				<div class="avatar-container">
+					<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
+						class="avatar" alt="My avatar" />
+				</div>
 			</div>
 			<div class="right">
 				<h1>桜ノ宮<b><ruby>アイラ<rt>AIRA</rt>
@@ -21,6 +23,7 @@
 				<SocialButtons />
 			</div>
 		</div>
+		<span class="material-icons scroll-down">expand_more</span>
 	</div>
 </template>
 
@@ -28,25 +31,24 @@
 	$avatar-size: 28vw;
 	$center: 60vh;
 
+	.home-header {
+		--center: 60vh;
+		position: relative;
+
+		@include small-tablet {
+			--center: 70vh;
+		}
+	}
+
 	.background {
 		position: absolute;
 		right: 0;
 		left: 0;
 		z-index: -1;
-		height: $center;
+		height: var(--center);
 		overflow: hidden;
 		animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) both bg-intro;
 		pointer-events: none;
-
-		@keyframes bg-intro {
-			from {
-				height: 0;
-			}
-
-			to {
-				height: $center;
-			}
-		}
 
 		img {
 			display: block;
@@ -70,36 +72,47 @@
 				opacity: 0.85;
 			}
 		}
-	}
 
-	@keyframes move-in {
-		from {
-			opacity: 0;
-			translate: 50vw 0;
+		@keyframes bg-intro {
+			from {
+				height: 0;
+			}
+
+			to {
+				height: var(--center);
+			}
 		}
 	}
 
 	.header {
 		position: relative;
 		display: flex;
-		gap: 2rem;
+		gap: 4vw;
 		align-items: flex-end;
 		justify-content: center;
-		height: $center;
+		height: var(--center);
 		color: white;
-
-		@include phone {
-			flex-direction: column;
-			align-items: center;
-		}
 
 		.left {
 			display: flex;
 			transform: translateY(30%);
+
+			@include small-tablet {
+				margin-top: 3vh;
+				transform: none;
+			}
 		}
 
 		.right {
 			margin-bottom: 2rem;
+
+			@include small-tablet {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 0;
+			}
 		}
 
 		h1 {
@@ -148,20 +161,49 @@
 
 		.social-buttons {
 			position: absolute;
-			top: $center + 2vh;
+			top: calc(var(--center) + 3vh);
 			margin-left: -0.5rem;
 			padding-right: 1rem;
 
-			@include phone {
+			@include small-tablet {
+				top: calc(var(--center) + 5vh);
 				right: 0;
 				left: 0;
 				margin: 0;
-				padding: 10vw;
+				padding: 0 2rem;
+			}
+		}
+
+		@include small-tablet {
+			flex-direction: column;
+			gap: 2rem;
+			align-items: center;
+		}
+	}
+
+	.avatar-container {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			// z-index: 1;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: var(--accent-500);
+			border-radius: 50%;
+			opacity: 0;
+			animation: avatar-ripple 1s cubic-bezier(0.64, 0, 0, 1);
+			content: "";
+
+			@include small-tablet {
+				background-color: white;
 			}
 		}
 	}
 
 	.avatar {
+		position: relative;
 		width: $avatar-size;
 		border-radius: 100%;
 		animation: 0.6s cubic-bezier(0.26, 1.44, 0.4, 1.0) both avatar-intro;
@@ -176,8 +218,8 @@
 			}
 		}
 
-		@include phone {
-			margin-bottom: 20vw;
+		@include small-tablet {
+			width: 30vh;
 		}
 
 		@include dark {
@@ -192,12 +234,12 @@
 		font-size: 7.5vw;
 		font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
 
-		@include phone {
-			font-size: 8.2vw;
-		}
-
 		b {
 			font-weight: 900;
+		}
+
+		@include small-tablet {
+			font-size: 2.5rem;
 		}
 	}
 
@@ -208,6 +250,41 @@
 
 		@include tablet {
 			font-size: 1rem;
+		}
+	}
+
+	@keyframes scroll-down-icon {
+		from {
+			translate: 0 -5vw;
+			opacity: 0;
+		}
+	}
+
+	.scroll-down {
+		position: absolute;
+		bottom: 7dvh;
+		width: 100%;
+		color: var(--icon);
+		text-align: center;
+		animation: scroll-down-icon 1.5s cubic-bezier(0.1, 0.9, 0.2, 1) 1.2s backwards;
+	}
+
+	@keyframes move-in {
+		from {
+			opacity: 0;
+			translate: 50vw 0;
+		}
+	}
+
+	@keyframes avatar-ripple {
+		0% {
+			transform: scale(0);
+			opacity: 0.8;
+		}
+
+		100% {
+			transform: scale(3);
+			opacity: 0;
 		}
 	}
 </style>

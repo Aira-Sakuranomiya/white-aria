@@ -5,11 +5,8 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@nuxt/image',
-		'@nuxtjs/svg-sprite',
+		'nuxt-icons',
 	],
-	svgSprite: {
-		input: "~/assets/icons",
-	},
 	css: [
 		"assets/styles/global.scss",
 		"assets/styles/global-colors.scss"
