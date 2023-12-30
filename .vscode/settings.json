@@ -37,8 +37,8 @@
 		"html"
 	],
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.sortImports": true,
+		"source.fixAll": "explicit",
+		"source.sortImports": "explicit"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib",
 }

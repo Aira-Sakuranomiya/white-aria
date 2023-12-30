@@ -35,6 +35,7 @@
 
 	.navigation {
 		--nav-left-color: var(--accent-500);
+		--nav-right-color: var(--icon);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -44,6 +45,7 @@
 
 		&.home {
 			--nav-left-color: white;
+			--nav-right-color: white;
 		}
 
 		.site-name {
@@ -85,7 +87,7 @@
 				justify-content: center;
 				height: 100%;
 				padding: 0 12px;
-				color: hsl(from var(--accent-500) h s calc(l + 0.2));
+				color: var(--nav-right-color);
 				text-decoration: none;
 
 				&::after {

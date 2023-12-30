@@ -11,7 +11,7 @@
 		<div class="header">
 			<div class="left">
 				<div class="avatar-container">
-					<NuxtImg src="https://i1.hdslb.com/bfs/face/0997d3ad773f67b3bfd7294edfa63b23981aee02.jpg@733w_733h.webp"
+					<NuxtImg src="https://i1.hdslb.com/bfs/face/17eade5b387921360571dd275b8e1508c049ba1b.jpg@390w_390h.webp"
 						class="avatar" alt="My avatar" />
 				</div>
 			</div>
@@ -28,11 +28,10 @@
 </template>
 
 <style scoped lang="scss">
-	$avatar-size: 28vw;
-	$center: 60vh;
+	$center: 55vh;
 
 	.home-header {
-		--center: 60vh;
+		--center: 55vh;
 		position: relative;
 
 		@include small-tablet {
@@ -104,7 +103,7 @@
 		}
 
 		.right {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 
 			@include small-tablet {
 				display: flex;
@@ -161,7 +160,7 @@
 
 		.social-buttons {
 			position: absolute;
-			top: calc(var(--center) + 3vh);
+			top: calc(var(--center) + 2vh);
 			margin-left: -0.5rem;
 			padding-right: 1rem;
 
@@ -204,7 +203,8 @@
 
 	.avatar {
 		position: relative;
-		width: $avatar-size;
+		width: 28vw;
+		max-width: 260px;
 		border-radius: 100%;
 		animation: 0.6s cubic-bezier(0.26, 1.44, 0.4, 1.0) both avatar-intro;
 
@@ -231,7 +231,7 @@
 		@include text-shadow;
 		display: flex;
 		gap: 0.5em;
-		font-size: 7.5vw;
+		font-size: min(7vw, 4.5rem);
 		font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
 
 		b {
@@ -246,11 +246,7 @@
 	h2 {
 		@include text-shadow;
 		margin-left: 0.1em;
-		font-size: 2vw;
-
-		@include tablet {
-			font-size: 1rem;
-		}
+		font-size: clamp(1rem, 2vw, 1.2857rem);
 	}
 
 	@keyframes scroll-down-icon {
@@ -283,7 +279,7 @@
 		}
 
 		100% {
-			transform: scale(3);
+			transform: scale(2);
 			opacity: 0;
 		}
 	}
