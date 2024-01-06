@@ -6,13 +6,13 @@
 	<div class="home-header">
 		<div class="background">
 			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp"
-				alt="Background" />
+				alt="Background" referrerpolicy="no-referrer" />
 		</div>
 		<div class="header">
 			<div class="left">
 				<div class="avatar-container">
 					<NuxtImg src="https://i1.hdslb.com/bfs/face/17eade5b387921360571dd275b8e1508c049ba1b.jpg@390w_390h.webp"
-						class="avatar" alt="My avatar" />
+						class="avatar" alt="My avatar" referrerpolicy="no-referrer" />
 				</div>
 			</div>
 			<div class="right">
