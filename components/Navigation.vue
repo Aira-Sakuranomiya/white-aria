@@ -2,7 +2,7 @@
 </script>
 
 <template>
-	<div :class="{ 'home': $route.path == '/' }">
+	<div>
 		<div class="left">
 			<NuxtLink to="/">
 				<span class="material-icons">local_cafe</span>
@@ -43,7 +43,7 @@
 		height: 3rem;
 		// box-shadow: 0 0 1.5rem 0 rgb(var(--accent-500-rgb) / 30%);
 
-		&.home {
+		&.white {
 			--nav-left-color: white;
 			--nav-right-color: white;
 		}

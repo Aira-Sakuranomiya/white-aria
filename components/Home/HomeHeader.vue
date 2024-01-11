@@ -4,10 +4,10 @@
 
 <template>
 	<div class="home-header">
-		<div class="background">
+		<!-- <div class="background">
 			<NuxtImg src="https://i0.hdslb.com/bfs/new_dyn/a6d44500ef3c61e4cc8d91196f0a4ba1456935358.png@1024w_1024h.webp"
 				alt="Background" referrerpolicy="no-referrer" />
-		</div>
+		</div> -->
 		<div class="header">
 			<div class="left">
 				<div class="avatar-container">
@@ -23,7 +23,6 @@
 				<SocialButtons />
 			</div>
 		</div>
-		<span class="material-icons scroll-down">expand_more</span>
 	</div>
 </template>
 
@@ -90,7 +89,7 @@
 		align-items: flex-end;
 		justify-content: center;
 		height: var(--center);
-		color: white;
+		color: var(--accent-500);
 
 		.left {
 			display: flex;
@@ -228,7 +227,7 @@
 	}
 
 	h1 {
-		@include text-shadow;
+		// @include text-shadow;
 		display: flex;
 		gap: 0.5em;
 		font-size: min(7vw, 4.5rem);
@@ -244,25 +243,9 @@
 	}
 
 	h2 {
-		@include text-shadow;
+		// @include text-shadow;
 		margin-left: 0.1em;
 		font-size: clamp(1rem, 2vw, 1.2857rem);
-	}
-
-	@keyframes scroll-down-icon {
-		from {
-			translate: 0 -5vw;
-			opacity: 0;
-		}
-	}
-
-	.scroll-down {
-		position: absolute;
-		bottom: 7dvh;
-		width: 100%;
-		color: var(--icon);
-		text-align: center;
-		animation: scroll-down-icon 1.5s cubic-bezier(0.1, 0.9, 0.2, 1) 1.2s backwards;
 	}
 
 	@keyframes move-in {
