@@ -5,6 +5,10 @@
 <template>
 	<div class="social-buttons">
 
+		<a href="https://bsky.app/profile/aira.cafe" target="_blank" title="Bluesky">
+			<ButtonIcon name="logo/bluesky" />
+		</a>
+
 		<a href="https://twitter.com/otomadhero" target="_blank" title="Twitter">
 			<ButtonIcon name="logo/twitter" />
 		</a>
@@ -58,12 +62,12 @@
 			animation: social-button-anim 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 		}
 
-		a>.button-icon {
+		a > .button-icon {
 			color: var(--accent-500);
 		}
 	}
 
-	@for $i from 1 through 8 {
+	@for $i from 1 through 9 {
 		.social-buttons a:nth-child(#{$i}) {
 			animation-delay: calc($i / 20 + 0.65) + s !important;
 		}
