@@ -193,10 +193,6 @@
 			opacity: 0;
 			animation: avatar-ripple 1s cubic-bezier(0.64, 0, 0, 1);
 			content: "";
-
-			@include small-tablet {
-				background-color: white;
-			}
 		}
 	}
 
