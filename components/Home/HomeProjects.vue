@@ -15,35 +15,35 @@
 </template>
 
 <style scoped lang="scss">
-	$padding: 10vh;
+$padding: 10vh;
 
-	.home-projects {
-		display: flex;
-		flex-direction: column;
-		gap: $padding;
-		align-items: center;
-		justify-content: center;
-		padding: $padding;
+.home-projects {
+	display: flex;
+	flex-direction: column;
+	gap: $padding;
+	align-items: center;
+	justify-content: center;
+	padding: $padding;
+}
+
+h4 {
+	color: var(--accent-500);
+	font-size: 1.5rem;
+	text-align: center;
+
+	@include dark {
+		@include small-text-shadow;
 	}
+}
 
-	h4 {
-		color: var(--accent-500);
-		font-size: 1.5rem;
-		text-align: center;
+.projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	place-items: center;
 
-		@include dark {
-			@include small-text-shadow;
-		}
+	@include small-tablet {
+		grid-template-columns: 1fr;
 	}
-
-	.projects {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-		place-items: center;
-
-		@include small-tablet {
-			grid-template-columns: 1fr;
-		}
-	}
+}
 </style>

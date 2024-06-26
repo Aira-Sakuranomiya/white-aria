@@ -1,9 +1,9 @@
 <script setup lang="ts">
-	const props = defineProps<{
-		href: string;
-		name: string;
-		icon: string;
-	}>();
+const props = defineProps<{
+	href: string;
+	name: string;
+	icon: string;
+}>();
 </script>
 
 <template>
@@ -13,22 +13,22 @@
 </template>
 
 <style scoped lang="scss">
-	a {
-		color: var(--accent-500);
-		transition: 0.2s;
+a {
+	color: var(--accent-500);
+	transition: 0.2s;
 
-		&:hover {
-			transform: scale(1.1);
-		}
+	&:hover {
+		transform: scale(1.1);
 	}
+}
 
-	.icon {
-		display: block;
-		font-size: unset;
+.icon {
+	display: block;
+	font-size: unset;
 
-		&:deep(svg) {
-			width: auto;
-			height: auto;
-		}
+	&:deep(svg) {
+		width: auto;
+		height: auto;
 	}
+}
 </style>

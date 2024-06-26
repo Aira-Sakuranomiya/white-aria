@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	useHead({ title: "Home" });
+useHead({ title: "Home" });
 </script>
 
 <template>
@@ -10,13 +10,13 @@
 </template>
 
 <style scoped lang="scss">
-	.page-wrapper {
-		height: 100dvh;
-		padding-top: 0 !important;
-		overflow-y: scroll;
+.page-wrapper {
+	height: 100dvh;
+	padding-top: 0 !important;
+	overflow-y: scroll;
 
-		>* {
-			height: 100dvh;
-		}
+	> * {
+		height: 100dvh;
 	}
+}
 </style>
