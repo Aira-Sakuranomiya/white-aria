@@ -51,6 +51,11 @@ useHead({ title: "My Profile" });
 				</div>
 
 				<div>
+					<span class="material-icons">view_in_ar</span>
+					<span>Minecraft</span>
+				</div>
+
+				<div>
 					<span class="material-icons">local_laundry_service</span>
 					<span>maimai</span>
 				</div>
@@ -59,8 +64,7 @@ useHead({ title: "My Profile" });
 
 			<div class="side-img-wrapper">
 				<!-- <h2>Who is<br><b>Aira?</b></h2> -->
-				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img"
-					alt="A photo of me" />
+				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me" />
 			</div>
 
 		</div>
@@ -99,7 +103,7 @@ useHead({ title: "My Profile" });
 	}
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 9 {
 	.list > div:nth-of-type(#{$i}) {
 		animation-delay: calc($i / 20) + s !important;
 	}
