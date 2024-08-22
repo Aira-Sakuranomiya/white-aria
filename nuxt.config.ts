@@ -9,11 +9,6 @@ export default defineNuxtConfig({
 					'nuxt-icons',
 	],
 
- css: [
-					"assets/styles/global.scss",
-					"assets/styles/global-colors.scss"
-	],
-
  vite: {
 					css: {
 									preprocessorOptions: {
