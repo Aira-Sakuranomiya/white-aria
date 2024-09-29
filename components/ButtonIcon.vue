@@ -16,14 +16,15 @@ const props = defineProps<{
 	flex-shrink: 0;
 	align-items: center;
 	justify-content: center;
-	width: 48px;
-	height: 48px;
+	width: 3rem;
+	height: 3rem;
 	border-radius: 100%;
 	cursor: pointer;
 	transition: 0.2s;
+	color: var(--neutral);
 
 	.icon {
-		font-size: 30px;
+		font-size: 2rem;
 
 		@include dark {
 			filter: drop-shadow(0 0.05em 0.8em var(--accent-500));

@@ -4,12 +4,12 @@
 
 <template>
 	<div class="home-projects">
-		<h4>+ Projects +</h4>
+		<h2>+ Projects +</h2>
 		<div class="projects">
 			<Project href="https://space.bilibili.com/171767281/" name="NOVA音MAD社" icon="logo/nova" />
 			<Project href="https://otomad.wiki/" name="OtomadWiki" icon="logo/otomadwiki" />
-			<Project href="https://github.com/KIRAKIRA-DOUGA/" name="KIRAKIRA" icon="logo/kirakira" />
 			<Project href="https://www.calibur.tv/" name="calibur" icon="logo/calibur" />
+			<Project href="https://kirakira.moe" name="KIRAKIRA" icon="logo/kirakira" />
 		</div>
 	</div>
 </template>
@@ -26,9 +26,9 @@ $padding: 10vh;
 	padding: $padding;
 }
 
-h4 {
+h2 {
 	color: var(--accent-500);
-	font-size: 1.5rem;
+	font-size: 2rem;
 	text-align: center;
 
 	@include dark {
@@ -37,13 +37,12 @@ h4 {
 }
 
 .projects {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-	place-items: center;
+	display: flex;
+	gap: 3rem;
+	width: 100%;
 
-	@include small-tablet {
-		grid-template-columns: 1fr;
+	@include tablet {
+		flex-direction: column;
 	}
 }
 </style>

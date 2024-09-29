@@ -1,3 +1,9 @@
+@mixin small {
+	@media screen and (width <=400px) {
+		@content;
+	}
+}
+
 @mixin phone {
 	@media screen and (width <= 576px) {
 		@content;
@@ -12,12 +18,6 @@
 
 @mixin tablet {
 	@media screen and (width <= 992px) {
-		@content;
-	}
-}
-
-@mixin small {
-	@media screen and (width <=400px) {
 		@content;
 	}
 }
@@ -38,4 +38,8 @@
 
 @mixin small-text-shadow {
 	text-shadow: 0 0.05em 0.8em var(--accent-500);
+}
+
+@mixin capsule {
+	border-radius: 9999rem;
 }

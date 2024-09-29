@@ -1,15 +1,18 @@
 <script setup lang="ts">
-useHead({ title: "My Profile" });
+useHead({ title: "Profile" });
+definePageMeta({
+	navigationBgStyle: "progressive",
+});
 </script>
 
 <template>
-	<div class="page-wrapper">
+	<div class="page-container">
 
 		<div class="content">
 
 			<div class="list">
 
-				<h4>+ Profile +</h4>
+				<h2>+ Profile +</h2>
 
 				<hr />
 
@@ -63,7 +66,6 @@ useHead({ title: "My Profile" });
 			</div>
 
 			<div class="side-img-wrapper">
-				<!-- <h2>Who is<br><b>Aira?</b></h2> -->
 				<NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me" />
 			</div>
 
@@ -72,7 +74,7 @@ useHead({ title: "My Profile" });
 </template>
 
 <style scoped lang="scss">
-.page-wrapper {
+.page-container {
 	// @include content-padding;
 	display: flex;
 	gap: 3rem;
@@ -103,12 +105,6 @@ useHead({ title: "My Profile" });
 	}
 }
 
-@for $i from 1 through 9 {
-	.list > div:nth-of-type(#{$i}) {
-		animation-delay: calc($i / 20) + s !important;
-	}
-}
-
 .list {
 	// @include text-shadow;
 	display: flex;
@@ -116,7 +112,7 @@ useHead({ title: "My Profile" });
 	flex-shrink: 0;
 	gap: 1.5rem;
 	padding: 0 8vw;
-	color: var(--icon);
+	color: var(--neutral);
 	animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards list-intro;
 
 	hr {
@@ -124,9 +120,9 @@ useHead({ title: "My Profile" });
 		visibility: hidden;
 	}
 
-	> h4 {
+	> h2 {
 		color: var(--accent-500);
-		font-size: 1.5rem;
+		font-size: 2rem;
 		text-align: center;
 
 		@include dark {
@@ -147,6 +143,13 @@ useHead({ title: "My Profile" });
 	}
 }
 
+@for $i from 1 through 9 {
+	.list > div:nth-of-type(#{$i}) {
+		animation-delay: 50ms * ($i - 1);
+		animation-duration: 800ms + 20ms * ($i - 1);
+	}
+}
+
 @keyframes side-img-wrapper-intro {
 	from {
 		transform: translateX(100%);
@@ -162,26 +165,9 @@ useHead({ title: "My Profile" });
 
 .side-img-wrapper {
 	position: relative;
-	width: 100%;
+	min-width: 100%;
 	height: 100%;
 	animation: 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards side-img-wrapper-intro;
-
-	h2 {
-		position: absolute;
-		max-width: inherit;
-		color: white;
-		font-weight: 400;
-		font-size: 10vw;
-		text-shadow: 0 0.05em 0.1em rgb(var(--accent-500-rgb) / 15%);
-
-		@include tablet {
-			display: none;
-		}
-
-		@include phone {
-			display: none;
-		}
-	}
 
 	@include phone {
 		flex-shrink: 0;

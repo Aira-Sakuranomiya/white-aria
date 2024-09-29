@@ -3,8 +3,8 @@ useHead({ title: "Links" });
 </script>
 
 <template>
-	<div class="page-wrapper">
-		<h4>+ Friends' Sites +</h4>
+	<div class="page-container">
+		<h2>+ Friends' Sites +</h2>
 		<div class="links">
 			<a href="https://lachrymal.net">lachrymaL</a>
 			<a href="https://aliv.life/">alivemaster</a>
@@ -17,21 +17,20 @@ useHead({ title: "Links" });
 </template>
 
 <style scoped lang="scss">
-.page-wrapper {
+.page-container {
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	padding-top: 0 !important;
 }
 
-h4 {
+h2 {
 	color: var(--accent-500);
-	font-size: 1.5rem;
+	font-size: 2rem;
 	text-align: center;
-	animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+	animation: link-intro 800ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 
 	@include dark {
 		@include small-text-shadow;
@@ -46,7 +45,8 @@ h4 {
 
 @for $i from 1 through 8 {
 	.links a:nth-of-type(#{$i}) {
-		animation-delay: calc($i / 20) + s !important;
+		animation-delay: 50ms * ($i - 1);
+		animation-duration: 800ms + 20ms * ($i - 1);
 	}
 }
 
@@ -59,7 +59,7 @@ h4 {
 
 	a {
 		padding: 1.5rem 0;
-		color: var(--accent-500);
+		color: var(--neutral);
 		text-decoration: none;
 		transition: 0.2s;
 		animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;

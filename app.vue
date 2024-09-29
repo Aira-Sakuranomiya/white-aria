@@ -14,20 +14,22 @@ useHead({
 
 <style lang="scss">
 :root {
-	--accent-300: #eab8c4;
+	--accent-300: #ffdfe7;
 	--accent-500: #f06e8e;
 	--accent-500-rgb: 240 110 142;
 	--hover-overlay: rgb(0 0 0 / 5%);
 	--hover-overlay-light: rgb(255 255 255 / 15%);
 	--ripple: var(--hover-overlay);
 	--main-bg: white;
-	--icon: #797173;
+	--neutral: #797173;
+	--text: black;
 	background-color: var(--main-bg);
 
 	@include dark {
 		--hover-overlay: rgb(255 255 255 / 8%);
 		--main-bg: black;
-		--icon: #e5e4e4;
+		--neutral: #e5e4e4;
+		--text: white;
 	}
 }
 
@@ -44,13 +46,14 @@ useHead({
 body {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	font-size: 16px;
+	font-size: 1rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Roboto Flex", Roboto, Inter, "Segoe UI Variable Display", "Segoe UI", Ubuntu, Cantarell, "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans CN", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
 	-webkit-tap-highlight-color: transparent;
+	// accent-color: var(--accent-500);
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	*,
 	::before,
 	::after {
@@ -96,7 +99,7 @@ a {
 // }
 
 .page-leave-active {
-	transition: all 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	transition: all 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 // .page-enter-from {
@@ -105,7 +108,7 @@ a {
 // }
 
 .page-leave-to {
-	transform: translateY(-8rem);
+	transform: translateY(-4rem);
 	opacity: 0;
 }
 
@@ -121,8 +124,7 @@ a {
 .material-icons {
 	display: inline-block;
 	font-weight: normal;
-	font-size: 24px;
-	/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+	font-size: 1.5rem;
 	font-family: "Material Icons Round";
 	font-style: normal;
 	line-height: 1;

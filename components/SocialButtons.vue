@@ -61,10 +61,6 @@
 	a {
 		animation: social-button-anim 0.5s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 	}
-
-	a > .button-icon {
-		color: var(--accent-500);
-	}
 }
 
 @for $i from 1 through 9 {

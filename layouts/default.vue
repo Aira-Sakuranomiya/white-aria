@@ -3,19 +3,12 @@
 </script>
 
 <template>
-	<Navigation class="navigation" />
-	<div class="container">
-		<slot></slot>
-	</div>
+	<Navigation />
+	<slot></slot>
 </template>
 
 <style scoped lang="scss">
-.navigation {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	width: 100dvw;
-	height: 3rem;
+::slotted {
+	padding-top: 3rem;
 }
 </style>

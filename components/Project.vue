@@ -4,17 +4,26 @@ const props = defineProps<{
 	name: string;
 	icon: string;
 }>();
+
+const colored = ref(false);
 </script>
 
 <template>
 	<a :href="href" target="_blank" :name="name">
-		<NuxtIcon :name="icon" class="icon" filled />
+		<Transition>
+			<NuxtIcon :name="icon" class="icon" filled />
+		</Transition>
 	</a>
 </template>
 
 <style scoped lang="scss">
 a {
-	color: var(--accent-500);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 4rem;
+	color: var(--neutral);
 	transition: 0.2s;
 
 	&:hover {
@@ -27,7 +36,7 @@ a {
 	font-size: unset;
 
 	&:deep(svg) {
-		width: auto;
+		width: 100%;
 		height: auto;
 	}
 }

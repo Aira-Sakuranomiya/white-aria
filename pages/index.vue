@@ -3,19 +3,15 @@ useHead({ title: "Home" });
 </script>
 
 <template>
-	<div class="page-wrapper">
+	<div class="page-container">
 		<HomeHeader />
 		<HomeProjects />
 	</div>
 </template>
 
 <style scoped lang="scss">
-.page-wrapper {
-	height: 100dvh;
-	padding-top: 0 !important;
-	overflow-y: scroll;
-
-	> * {
+.page-container {
+	> *:nth-child(1) {
 		height: 100dvh;
 	}
 }
