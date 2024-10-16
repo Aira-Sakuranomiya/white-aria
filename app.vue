@@ -43,6 +43,11 @@ useHead({
 	font-feature-settings: "liga";
 }
 
+html,
+body {
+	overscroll-behavior: none;
+}
+
 body {
 	margin: 0;
 	padding: 0;
