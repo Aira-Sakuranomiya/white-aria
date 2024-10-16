@@ -29,6 +29,7 @@
 	gap: 4vw;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 
 	@include small-tablet {
 		flex-direction: column;

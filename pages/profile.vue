@@ -79,6 +79,7 @@ definePageMeta({
 	display: flex;
 	gap: 3rem;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .content {
