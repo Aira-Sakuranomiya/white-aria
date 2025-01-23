@@ -26,7 +26,7 @@ useHead({ title: "Blog" });
 
 h2 {
 	color: var(--accent-500);
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
 	margin: 3rem 0;
 	animation: intro 800ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;

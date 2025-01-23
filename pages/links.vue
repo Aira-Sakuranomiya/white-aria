@@ -6,12 +6,18 @@ useHead({ title: "Links" });
 	<div class="page-container">
 		<h2>+ Friends' Sites +</h2>
 		<div class="links">
-			<a href="https://lachrymal.net">lachrymaL</a>
-			<a href="https://aliv.life/">alivemaster</a>
-			<a href="https://megakite.icu">megakite</a>
-			<a href="https://akutazehy.github.io">Akuta Zehy</a>
-			<a href="https://ali-a.cn/">熊可狸</a>
-			<a href="https://wzq02.top/">wzq02</a>
+			<FriendLink name="lachrymaL" to="https://lachrymal.net"
+				avatar="https://avatars.githubusercontent.com/u/13716477" />
+			<FriendLink name="alivemaster" to="https://yasunaori.be/"
+				avatar="https://avatars.githubusercontent.com/u/21076137" />
+			<FriendLink name="megakite" to="https://megakite.icu" avatar="https://avatars.githubusercontent.com/u/20639794" />
+			<FriendLink name="Akuta Zehy" to="https://akutazehy.github.io"
+				avatar="https://avatars.githubusercontent.com/u/42381419" />
+			<FriendLink name="熊可狸" description="KumaKorin" to="https://ali-a.cn/"
+				avatar="https://m1.miaomc.cn/uploads/20210623_b735dde7c665d.jpeg" />
+			<FriendLink name="WZQ'02" to="https://wzq02.top/" avatar="https://avatars.githubusercontent.com/u/52278929" />
+			<FriendLink name="哞菇" description="Nekotora" to="https://flag.moe/"
+				avatar="https://avatars.githubusercontent.com/u/7263028" />
 		</div>
 	</div>
 </template>
@@ -29,7 +35,7 @@ useHead({ title: "Links" });
 
 h2 {
 	color: var(--accent-500);
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
 	animation: link-intro 800ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 
@@ -52,23 +58,32 @@ h2 {
 }
 
 .links {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	align-items: center;
 	justify-content: center;
-	padding: 0 10vw;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 1rem;
+	gap: 1rem;
+	width: calc(100% - 2rem);
+	max-width: 960px;
+	box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 20%);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+	background-color: var(--card);
+
+	@include tablet {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include phone {
+		padding: 0.5rem;
+		gap: 0.5rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
 
 	a {
-		padding: 1.5rem 0;
-		color: var(--neutral);
-		text-decoration: none;
-		transition: 0.2s;
 		animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
-
-		&:hover {
-			scale: 1.1;
-			opacity: 0.5;
-		}
 	}
 }
 </style>

@@ -19,6 +19,7 @@ useHead({
 	--accent-500-rgb: 240 110 142;
 	--hover-overlay: rgb(0 0 0 / 5%);
 	--hover-overlay-light: rgb(255 255 255 / 15%);
+	--card: rgb(255 255 255 / 10%);
 	--ripple: var(--hover-overlay);
 	--main-bg: white;
 	--neutral: #797173;
@@ -27,7 +28,8 @@ useHead({
 
 	@include dark {
 		--hover-overlay: rgb(255 255 255 / 8%);
-		--main-bg: black;
+		--card: rgb(255 255 255 / 5%);
+		--main-bg: #212121;
 		--neutral: #e5e4e4;
 		--text: white;
 	}

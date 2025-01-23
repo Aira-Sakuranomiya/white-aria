@@ -28,7 +28,7 @@ $padding: 10vh;
 
 h2 {
 	color: var(--accent-500);
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
 
 	@include dark {

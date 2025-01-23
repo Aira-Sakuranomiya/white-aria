@@ -123,8 +123,9 @@ definePageMeta({
 
 	> h2 {
 		color: var(--accent-500);
-		font-size: 2rem;
+		font-size: 1.5rem;
 		text-align: center;
+		margin: 0 -8vw;
 
 		@include dark {
 			@include small-text-shadow;
@@ -140,7 +141,6 @@ definePageMeta({
 
 	@include phone {
 		width: 50%;
-		padding: 0 8vw;
 	}
 }
 

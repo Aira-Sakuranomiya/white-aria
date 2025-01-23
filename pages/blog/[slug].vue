@@ -91,7 +91,7 @@ article {
 	padding: 6rem 0 4rem;
 
 	> .title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		animation: title-intro 600ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
 	}
 

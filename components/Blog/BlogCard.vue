@@ -29,7 +29,7 @@ const props = defineProps<{
 	justify-content: center;
 	padding: 1rem;
 	color: var(--text);
-	background-color: var(--accent-100);
+	background-color: var(--card);
 	// box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 20%);
 	border-radius: 0.5rem;
 	transition: 0.2s;

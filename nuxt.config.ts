@@ -4,12 +4,18 @@ export default defineNuxtConfig({
 		enabled: false,
 	},
 
-	modules: ["@nuxt/image", "nuxt-icons", "@nuxt/content"],
+	modules: [
+		"@nuxt/image",
+		"nuxt-icons",
+		"@nuxt/content",
+		"@vueuse/nuxt",
+	],
 
 	vite: {
 		css: {
 			preprocessorOptions: {
 				scss: {
+					api: "modern-compiler",
 					additionalData: '@use "@/assets/styles/_mixins.scss" as *;',
 				},
 			},
