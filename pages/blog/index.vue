@@ -1,12 +1,15 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content';
+
 useHead({ title: "Blog" });
+const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] };
 </script>
 
 <template>
 	<div class="page-container">
 		<h2>+ Blog +</h2>
 		<div class="list-container">
-			<ContentList path="/posts" v-slot="{ list }">
+			<ContentList :query="query" path="/posts" v-slot="{ list }">
 				<NuxtLink :to="`/blog/${article.slug}`" v-for="article in list" :key="article._path">
 					<BlogCard :title="article.title" :date="article.date" :description="article.description" />
 				</NuxtLink>
