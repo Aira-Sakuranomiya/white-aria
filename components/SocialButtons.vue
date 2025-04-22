@@ -5,20 +5,24 @@
 <template>
 	<div class="social-buttons">
 
-		<a href="https://bsky.app/profile/aira.cafe" target="_blank" title="Bluesky">
-			<ButtonIcon name="logo/bluesky" />
+		<a href="https://github.com/Aira-Sakuranomiya" target="blank" title="GitHub">
+			<ButtonIcon name="logo/github" />
 		</a>
 
 		<a href="https://twitter.com/otomadhero" target="_blank" title="Twitter">
 			<ButtonIcon name="logo/twitter" />
 		</a>
 
-		<a href="https://www.youtube.com/@otomadhero" target="blank" title="YouTube">
-			<ButtonIcon name="logo/youtube" />
+		<a href="https://bsky.app/profile/aira.cafe" target="_blank" title="Bluesky">
+			<ButtonIcon name="logo/bluesky" />
 		</a>
 
 		<a href="https://space.bilibili.com/22807093" target="_blank" title="bilibili">
 			<ButtonIcon name="logo/bilibili" />
+		</a>
+
+		<a href="https://www.youtube.com/@otomadhero" target="blank" title="YouTube">
+			<ButtonIcon name="logo/youtube" />
 		</a>
 
 		<a href="https://www.nicovideo.jp/user/66837079" target="_blank" title="niconico">
@@ -27,10 +31,6 @@
 
 		<a href="https://music.163.com/#/user/home?id=86334936" target="blank" title="网易云音乐">
 			<ButtonIcon name="logo/cloudmusic" />
-		</a>
-
-		<a href="https://github.com/Aira-Sakuranomiya" target="blank" title="GitHub">
-			<ButtonIcon name="logo/github" />
 		</a>
 
 		<a href="https://discord.gg/DW6CYe3pKt" target="_blank" title="Discord Server">
