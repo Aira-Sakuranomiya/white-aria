@@ -12,6 +12,22 @@ export default defineNuxtConfig({
 	],
 
 	vite: {
+		plugins: [
+			{
+				// 干掉 nuxt-icons 引起的警告。https://github.com/gitFoxCode/nuxt-icons/issues/56
+				name: "vite-plugin-glob-transform",
+				transform(code: string, id: string) {
+					if (id.includes("nuxt-icons")) {
+						const transformed = code.replaceAll(/as:\s*['"]raw['"]/g, 'query: "?raw", import: "default"');
+						return {
+							code: transformed,
+							map: null,
+						};
+					}
+					return null;
+				},
+			},
+		],
 		css: {
 			preprocessorOptions: {
 				scss: {
