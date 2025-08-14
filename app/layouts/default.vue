@@ -3,12 +3,12 @@
 </script>
 
 <template>
-	<Navigation />
-	<slot></slot>
+  <Navigation />
+  <slot />
 </template>
 
 <style scoped lang="scss">
 ::slotted {
-	padding-top: 3rem;
+  padding-top: 3rem;
 }
 </style>

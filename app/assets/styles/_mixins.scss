@@ -1,45 +1,45 @@
 @mixin small {
-	@media screen and (width <=400px) {
-		@content;
-	}
+  @media screen and (width <=400px) {
+    @content;
+  }
 }
 
 @mixin phone {
-	@media screen and (width <= 576px) {
-		@content;
-	}
+  @media screen and (width <= 576px) {
+    @content;
+  }
 }
 
 @mixin small-tablet {
-	@media screen and (width <=719px) {
-		@content;
-	}
+  @media screen and (width <=719px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-	@media screen and (width <= 992px) {
-		@content;
-	}
+  @media screen and (width <= 992px) {
+    @content;
+  }
 }
 
 @mixin dark {
-	@media (prefers-color-scheme: dark) {
-		@content;
-	}
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
 }
 
 @mixin title-font {
-	font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 @mixin text-shadow {
-	text-shadow: 0 0.05em 0.2em var(--accent-500);
+  text-shadow: 0 0.05em 0.2em var(--accent-500);
 }
 
 @mixin small-text-shadow {
-	text-shadow: 0 0.05em 0.8em var(--accent-500);
+  text-shadow: 0 0.05em 0.8em var(--accent-500);
 }
 
 @mixin capsule {
-	border-radius: 9999rem;
+  border-radius: 9999rem;
 }
