@@ -20,7 +20,7 @@ useHead({ title: 'Links' })
         avatar="https://avatars.githubusercontent.com/u/42381419"
       />
       <FriendLink
-        name="熊可狸" description="KumaKorin" to="https://ali-a.cn/"
+        name="熊可狸" description="KumaKorin" to="https://korin.im/"
         avatar="https://m1.miaomc.cn/uploads/20210623_b735dde7c665d.jpeg"
       />
       <FriendLink name="WZQ'02" to="https://wzq02.top/" avatar="https://avatars.githubusercontent.com/u/52278929" />
