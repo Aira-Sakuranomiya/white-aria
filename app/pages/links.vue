@@ -28,6 +28,10 @@ useHead({ title: 'Links' })
         name="哞菇" description="Nekotora" to="https://flag.moe/"
         avatar="https://avatars.githubusercontent.com/u/7263028"
       />
+      <FriendLink
+        name="菜鸡" description="Yasaitori" to="https://www.yatori.fun/"
+        avatar="https://www.yatori.fun/_nuxt/icon.DEhTY4Pf.jpg"
+      />
     </div>
   </div>
 </template>
