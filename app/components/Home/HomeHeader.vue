@@ -6,8 +6,12 @@
   <div class="home-header">
     <div class="left">
       <div class="avatar-container">
-        <NuxtImg
+        <!-- <NuxtImg
           src="https://i1.hdslb.com/bfs/face/17eade5b387921360571dd275b8e1508c049ba1b.jpg@390w_390h.webp"
+          class="avatar" alt="My avatar" referrerpolicy="no-referrer"
+        /> -->
+        <NuxtImg
+          src="/images/avatar.webp"
           class="avatar" alt="My avatar" referrerpolicy="no-referrer"
         />
       </div>

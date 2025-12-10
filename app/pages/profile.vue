@@ -62,7 +62,7 @@ definePageMeta({
       </div>
 
       <div class="side-img-wrapper">
-        <NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me" />
+        <NuxtImg src="https://m1.miaomc.cn/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me" preload />
       </div>
     </div>
   </div>

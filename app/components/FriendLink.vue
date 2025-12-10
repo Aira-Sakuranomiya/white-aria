@@ -10,7 +10,7 @@ const props = defineProps<{
 <template>
   <NuxtLink :to class="friend-link">
     <div class="inner">
-      <NuxtImg :src="avatar" :alt="name" class="avatar" />
+      <NuxtImg :src="avatar" :alt="name" class="avatar" preload />
       <div class="texts">
         <span class="name">{{ name }}</span>
         <span v-if="description" class="description">{{ description }}</span>
