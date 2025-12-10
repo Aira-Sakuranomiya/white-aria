@@ -15,9 +15,16 @@
     <div class="right">
       <div class="titles">
         <h1>
-          桜ノ宮<b><ruby>アイラ<rt>AIRA</rt>
-            <rt>艾了个拉</rt>
-          </ruby></b>
+          <span>
+            桜ノ宮
+          </span>
+          <b>
+            <span class="first-name">
+              <span>アイラ</span>
+              <span class="small english-name">AIRA</span>
+              <span class="small chinese-name">艾了个拉</span>
+            </span>
+          </b>
         </h1>
         <h2><b>Kind and Kawaii</b>, Forever!~</h2>
       </div>
@@ -139,27 +146,26 @@ h1 {
     font-weight: 900;
   }
 
-  ruby {
-    @include title-font;
-    display: inline-flex;
+  .first-name {
+    display: flex;
     flex-direction: column-reverse;
+    align-items: center;
 
-    rb,
-    rt {
-      display: inline;
+    .small {
       font-size: 0.3em;
       line-height: 1;
       letter-spacing: 1em;
       text-align: center;
       text-indent: 1em;
 
-      &:nth-child(1) {
+      &.english-name {
+        @include title-font;
         margin-bottom: -0.5em;
       }
 
-      &:nth-child(2) {
-        margin-bottom: 0.5em;
+      &.chinese-name {
         font-size: 0.24em;
+        margin-bottom: 0.5em;
       }
     }
   }
