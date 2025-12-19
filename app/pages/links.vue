@@ -14,7 +14,10 @@ useHead({ title: 'Links' })
         name="alivemaster" to="https://yasunaori.be/"
         avatar="https://avatars.githubusercontent.com/u/21076137"
       />
-      <FriendLink name="megakite" to="https://megakite.icu" avatar="https://avatars.githubusercontent.com/u/20639794" />
+      <FriendLink
+        name="megakite" to="https://megakite.icu"
+        avatar="https://avatars.githubusercontent.com/u/20639794"
+      />
       <FriendLink
         name="Akuta Zehy" to="https://akutazehy.github.io"
         avatar="https://avatars.githubusercontent.com/u/42381419"
@@ -23,14 +26,21 @@ useHead({ title: 'Links' })
         name="熊可狸" description="KumaKorin" to="https://korin.im/"
         avatar="https://m1.miaomc.cn/uploads/20210623_b735dde7c665d.jpeg"
       />
-      <FriendLink name="WZQ'02" to="https://wzq02.top/" avatar="https://avatars.githubusercontent.com/u/52278929" />
+      <FriendLink
+        name="WZQ'02" to="https://wzq02.top/"
+        avatar="https://avatars.githubusercontent.com/u/52278929"
+      />
       <FriendLink
         name="哞菇" description="Nekotora" to="https://flag.moe/"
         avatar="https://avatars.githubusercontent.com/u/7263028"
       />
       <FriendLink
         name="菜鸡" description="Yasaitori" to="https://www.yatori.fun/"
-        avatar="https://www.yatori.fun/_nuxt/icon.DEhTY4Pf.jpg"
+        avatar="https://avatars.githubusercontent.com/u/118044114"
+      />
+      <FriendLink
+        name="Hakadao" to="https://hakadao.cc/"
+        avatar="https://avatars.githubusercontent.com/u/33394391"
       />
     </div>
   </div>
@@ -64,7 +74,7 @@ h2 {
   }
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 12 {
   .links a:nth-of-type(#{$i}) {
     animation-delay: 50ms * ($i - 1);
     animation-duration: 800ms + 20ms * ($i - 1);
