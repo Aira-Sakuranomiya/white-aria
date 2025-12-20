@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const nuxtApp = useNuxtApp()
 const loading = ref(true)
-const allowTransitions = ref(false)
+const hideContents = ref(true)
 nuxtApp.hook('page:loading:end', () => {
   loading.value = false
   setTimeout(() => {
-    allowTransitions.value = true
+    hideContents.value = false
   }, 800)
 })
 </script>
 
 <template>
   <Navigation />
-  <div class="layout-slot-wrapper" :class="{ remove: !allowTransitions }">
+  <div class="layout-slot-wrapper" :class="{ remove: hideContents }">
     <slot />
   </div>
   <DXTransition :loading :duration="500" :delay="20" />
