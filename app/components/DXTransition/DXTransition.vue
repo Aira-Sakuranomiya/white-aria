@@ -2,8 +2,10 @@
 const props = withDefaults(defineProps<{
   loading: boolean
   duration?: number
+  delay?: number
 }>(), {
   duration: 600,
+  delay: 100,
 })
 const durationFormatted = computed(() => `${props.duration}ms`)
 const show = ref(false)
@@ -20,7 +22,7 @@ watch(() => props.loading, (value) => {
         show.value = false
         leaveRequested.value = false
       }
-    }, props.duration + 100)
+    }, props.duration + props.delay)
   }
   else if (leavable.value) {
     show.value = false
@@ -30,36 +32,11 @@ watch(() => props.loading, (value) => {
   }
 }, { immediate: true })
 
-const { width, height } = useWindowSize()
-const ratio = computed(() => width.value / height.value)
-const itemsScale = computed(() => {
-  if (ratio.value > 1) {
-    return 1 / ratio.value
-  }
-  else {
-    return ratio.value
-  }
-})
-const itemsWidthMultiplier = computed(() => {
-  if (ratio.value > 1) {
-    return ratio.value
-  }
-  else {
-    return 1 / ratio.value
-  }
-})
-const itemsHeightMultiplier = computed(() => {
-  if (ratio.value > 1) {
-    return 1
-  }
-  else {
-    return 1
-  }
-})
+// 删除依赖窗口尺寸的计算，改用纯 CSS 在样式中处理
 </script>
 
 <template>
-  <div class="dx-transition">
+  <div class="dx-transition" :style="{ '--dx-transition-duration': durationFormatted }">
     <Transition>
       <div v-if="show" class="solid-bg" />
     </Transition>
@@ -119,10 +96,9 @@ $color-items-1: var(--dx-color-items-1);
 $color-items-2: var(--dx-color-items-2);
 $color-items-3: var(--dx-color-items-3);
 $color-items-4: var(--dx-color-items-4);
-$duration: v-bind(durationFormatted);
+$duration: var(--dx-transition-duration, 600ms);
 
 .dx-transition {
-  --dx-transition-duration: #{$duration};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,9 +207,9 @@ $duration: v-bind(durationFormatted);
 
 .items {
   $base: 61;
-  width: calc(max(#{$base}vw, #{$base}vh) * #{'v-bind(itemsWidthMultiplier)'});
-  height: calc(max(100vw, 100vh) * #{'v-bind(itemsHeightMultiplier)'});
-  scale: #{'v-bind(itemsScale)'};
+  width: calc(#{$base}vmax * #{'max(100vw / 100vh, 100vh / 100vw)'});
+  height: 100vmax;
+  scale: #{'calc(min(100vw / 100vh, 100vh / 100vw))'};
   display: flex;
   justify-content: center;
   align-items: center;
