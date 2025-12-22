@@ -1,3 +1,8 @@
+<docs>
+高仿 maimai DX UNiVERSE 以上版本的转场
+警告：当前实现方式兼容性不佳！见：https://caniuse.com/mdn-css_types_calc_typed_division_produces_unitless_number
+</docs>
+
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   loading: boolean
