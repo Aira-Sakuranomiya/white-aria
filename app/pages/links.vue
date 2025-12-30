@@ -24,7 +24,7 @@ useHead({ title: 'Links' })
       />
       <FriendLink
         name="熊可狸" description="KumaKorin" to="https://korin.im/"
-        avatar="https://m1.miaomc.cn/uploads/20210623_b735dde7c665d.jpeg"
+        avatar="https://i1.mcobj.com/uploads/20210623_b735dde7c665d.jpeg"
       />
       <FriendLink
         name="WZQ'02" to="https://wzq02.top/"
