@@ -14,13 +14,16 @@
     "@nuxt/eslint": "1.8.0",
     "@nuxt/icon": "2.0.0",
     "@nuxt/image": "^1.11.0",
-    "@types/node": "^22.19.2",
+    "@types/node": "^22.19.3",
     "@vueuse/core": "^13.9.0",
     "@vueuse/nuxt": "^13.9.0",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-plugin-format": "^1.1.0",
     "nuxt": "^4.2.2",
-    "sass": "^1.95.1",
+    "sass": "^1.97.1",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "nuxi": "^3.31.3"
   }
 }
