@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to class="friend-link">
+  <NuxtLink :to class="friend-link" target="_blank">
     <div class="inner">
       <NuxtImg :src="avatar" :alt="name" class="avatar" preload />
       <div class="texts">
