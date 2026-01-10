@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   name: string
 }>()
 </script>
 
 <template>
   <div class="button-icon">
-    <NuxtIcon :name="name" class="icon" />
+    <NuxtIcon :name class="icon" />
   </div>
 </template>
 
