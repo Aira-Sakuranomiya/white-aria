@@ -42,6 +42,10 @@ useHead({ title: 'Links' })
         name="Hakadao" to="https://hakadao.cc/"
         avatar="https://avatars.githubusercontent.com/u/33394391"
       />
+      <FriendLink
+        name="唐辫小二" description="Larmax Harker" to="https://larmaxharkerx.github.io/"
+        avatar="https://i1.mcobj.com/imgb/u1/20260109_69606ac284bd2.jpeg"
+      />
     </div>
   </div>
 </template>
