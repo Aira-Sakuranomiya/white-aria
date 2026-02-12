@@ -56,8 +56,8 @@ definePageMeta({
         </div>
 
         <div>
-          <span class="material-icons">local_laundry_service</span>
-          <span>maimai</span>
+          <span class="material-icons">fort</span>
+          <span>Arknights</span>
         </div>
       </div>
 
