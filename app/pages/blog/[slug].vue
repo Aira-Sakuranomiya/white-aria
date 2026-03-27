@@ -161,8 +161,9 @@ article {
   }
 
   img {
-    border-radius: 6px;
+    border-radius: 8px;
     margin-inline: auto;
+    max-width: 100%;
   }
 }
 </style>
