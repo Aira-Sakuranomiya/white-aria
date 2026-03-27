@@ -6,13 +6,11 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  modules: [
-    '@nuxt/image',
-    '@nuxt/content',
-    '@vueuse/nuxt',
-    '@nuxt/icon',
-    '@nuxt/eslint',
-  ],
+  modules: ['@nuxt/image', '@nuxt/content', '@vueuse/nuxt', '@nuxt/icon', '@nuxt/eslint', '@nuxt/hints'],
+
+  hints: {
+    devtools: true,
+  },
 
   vite: {
     css: {
@@ -22,6 +20,12 @@ export default defineNuxtConfig({
           additionalData: '@use "@/assets/styles/_mixins.scss" as *;',
         },
       },
+    },
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ],
     },
   },
 
