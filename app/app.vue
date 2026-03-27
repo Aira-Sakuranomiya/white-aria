@@ -1,6 +1,9 @@
 <script setup lang="ts">
 useHead({
   titleTemplate: '%s - AIRA',
+  htmlAttrs: {
+    lang: 'en',
+  },
 })
 </script>
 
@@ -23,7 +26,7 @@ useHead({
   --ripple: var(--hover-overlay);
   --main-bg: white;
   --neutral: #797173;
-  --text: black;
+  --text: #212121;
   background-color: var(--main-bg);
 
   @include dark {
@@ -43,6 +46,7 @@ useHead({
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
+  text-autospace: normal;
 }
 
 html,
@@ -151,5 +155,31 @@ a {
   font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
   user-select: none;
+}
+
+pre {
+  overflow: auto;
+  font-size: 12px;
+  line-height: 1.25rem;
+  background-color: var(--hover-overlay);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+code:not(pre > code) {
+  background-color: var(--hover-overlay);
+  font-size: 12px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+hr {
+  height: 1px;
+  color: var(--hover-overlay);
+  background-color: currentColor;
+  border: 0;
+  font-size: 0;
+  width: 100%;
 }
 </style>

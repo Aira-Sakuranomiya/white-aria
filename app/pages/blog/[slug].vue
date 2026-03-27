@@ -4,6 +4,14 @@ const { slug } = useRoute().params
 definePageMeta({
   hideLogo: true,
 })
+
+useHead(
+  {
+    htmlAttrs: {
+      lang: 'zh-CN',
+    },
+  },
+)
 </script>
 
 <template>
@@ -16,13 +24,13 @@ definePageMeta({
     <article>
       <ContentDoc v-slot="{ doc }" :path="`/posts/${slug}`">
         <div class="title-block">
+          <p class="date">
+            {{ doc.date }}
+          </p>
           <h2 class="title">
             {{ doc.title }}
           </h2>
-          <div class="date">
-            <span class="material-icons">calendar_today</span>
-            <p>{{ doc.date }}</p>
-          </div>
+          <hr>
         </div>
         <ContentRenderer class="content-renderer" :value="doc" />
       </ContentDoc>
@@ -86,30 +94,29 @@ article {
 .title-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 960px;
   color: var(--accent-500);
-  padding: 6rem 0 4rem;
+  padding: 8rem 1rem 4rem;
+
+  > .date {
+    animation: title-intro 600ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+    color: var(--neutral);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
 
   > .title {
     font-size: 1.5rem;
-    animation: title-intro 600ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
+    animation: title-intro 600ms 30ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
   }
 
-  > .date {
-    animation: title-intro 600ms 30ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: var(--neutral);
-    opacity: 0.8;
+  hr {
     margin-top: 1rem;
-    font-size: 0.875rem;
-
-    .material-icons {
-      font-size: 1rem;
-    }
+    animation: intro-hr 1s 500ms ease backwards;
+    transform-origin: left;
   }
 }
 
@@ -119,9 +126,15 @@ article {
   }
 }
 
+@keyframes intro-hr {
+  from {
+    transform: scaleX(0);
+  }
+}
+
 .content-renderer {
   animation: intro 800ms 100ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
-  line-height: 1.5rem;
+  line-height: 2rem;
   width: 100%;
   max-width: 960px;
   padding: 0 1rem 6rem;
@@ -132,7 +145,7 @@ article {
 <style lang="scss">
 .content-renderer {
   > * {
-    margin: 1rem 0;
+    margin: 1.25rem 0;
   }
 
   h2,
@@ -145,6 +158,11 @@ article {
 
   a {
     color: var(--accent-500);
+  }
+
+  img {
+    border-radius: 6px;
+    margin-inline: auto;
   }
 }
 </style>

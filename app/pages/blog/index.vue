@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content'
 
-useHead({ title: 'Blog' })
+useHead(
+  {
+    title: 'Blog',
+
+    htmlAttrs: {
+      lang: 'zh-CN',
+    },
+  },
+)
 const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
 </script>
 
