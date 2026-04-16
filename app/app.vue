@@ -28,6 +28,7 @@ useHead({
   --neutral: #797173;
   --text: #212121;
   background-color: var(--main-bg);
+  text-autospace: normal;
 
   @include dark {
     --hover-overlay: rgb(255 255 255 / 8%);
@@ -46,12 +47,6 @@ useHead({
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
-  text-autospace: normal;
-}
-
-html,
-body {
-  overscroll-behavior: none;
 }
 
 body {
