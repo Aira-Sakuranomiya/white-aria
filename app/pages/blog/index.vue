@@ -16,7 +16,7 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
 <template>
   <div class="page-container">
     <div class="content">
-      <SectionTitle icon="mdi:document">
+      <SectionTitle icon="mdi:arrow-right-thick">
         BLOG
       </SectionTitle>
 

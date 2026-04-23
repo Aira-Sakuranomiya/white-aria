@@ -4,7 +4,7 @@ useHead({ title: 'Links' })
 
 <template>
   <div class="page-container">
-    <SectionTitle icon="mdi:link">
+    <SectionTitle icon="mdi:arrow-top-right-thick">
       FRIENDS' SITES
     </SectionTitle>
     <div class="links">

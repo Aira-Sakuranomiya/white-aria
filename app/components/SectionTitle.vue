@@ -35,7 +35,7 @@ defineProps<{
 }
 
 span {
-  font-size: 6px;
+  font-size: 5px;
   font-weight: 600;
   color: var(--neutral);
 }
