@@ -9,6 +9,7 @@ useHead({
 
 <template>
   <div>
+    <div class="decoration-stripes" />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -152,5 +153,33 @@ hr {
   border: 0;
   font-size: 0;
   width: 100%;
+}
+</style>
+
+<style scoped lang="scss">
+.decoration-stripes {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32.8125rem;
+  background-image: linear-gradient(
+    -45deg,
+    transparent,
+    transparent 13.9512529279%,
+    black 0,
+    black 36.0487470721%,
+    transparent 0,
+    transparent 63.9512529279%,
+    black 0,
+    black 86.0487470721%,
+    transparent 0,
+    transparent
+  );
+  background-size: 0.5rem 0.5rem;
+  background-repeat: repeat;
+  mask-image: linear-gradient(0deg, rgb(0, 0, 0) 0, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  opacity: 0.02;
 }
 </style>
