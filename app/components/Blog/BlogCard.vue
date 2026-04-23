@@ -51,7 +51,7 @@ defineProps<{
   h2 {
     margin: 0;
     font-size: 1.25rem;
-    color: var(--accent-500);
+    // color: var(--accent-500);
   }
 
   p {

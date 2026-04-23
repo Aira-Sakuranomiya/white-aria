@@ -98,7 +98,7 @@ article {
   justify-content: center;
   width: 100%;
   max-width: 960px;
-  color: var(--accent-500);
+  color: var(--text);
   padding: 8rem 1rem 4rem;
 
   > .date {
