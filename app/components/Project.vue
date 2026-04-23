@@ -22,12 +22,13 @@ a {
   width: 100%;
   padding: 2rem;
   transition: 0.2s;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 20%);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   background-color: var(--card);
 
   &:hover {
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    background-color: var(--hover-bg);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(-0.5rem);
   }
 }

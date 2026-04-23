@@ -126,7 +126,7 @@ $lr-padding: 1rem;
   }
 
   &.scrolled {
-    box-shadow: 0 0 24px rgb(var(--accent-500-rgb) / 30%);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
     background-color: var(--main-bg);
   }
 

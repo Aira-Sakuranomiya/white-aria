@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content'
 
+definePageMeta({
+  layout: {
+    props: {
+      cornerIcon: 'mdi:document',
+    },
+  },
+})
+
 useHead(
   {
     title: 'Blog',
@@ -52,7 +60,7 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
 .list-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 

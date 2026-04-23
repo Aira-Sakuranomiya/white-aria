@@ -25,7 +25,7 @@ defineProps<{
 
 .icon-block {
   background-color: var(--accent-500);
-  color: white;
+  color: var(--main-bg);
   display: flex;
   align-items: center;
   justify-content: center;

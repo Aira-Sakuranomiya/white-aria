@@ -18,7 +18,7 @@ defineProps<{
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  background-color: var(--hover-overlay);
+  background-color: var(--neutral-secondary);
   color: var(--text);
   animation: 0.6s cubic-bezier(0.1, 0.9, 0.2, 1) backwards list-item-intro;
   border-radius: 2px;
@@ -28,7 +28,7 @@ defineProps<{
 .icon-wrapper {
   display: flex;
   background-color: var(--text);
-  color: white;
+  color: var(--main-bg);
   font-size: 20px;
   padding: 4px;
   border-top-right-radius: 2px;

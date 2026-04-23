@@ -32,7 +32,7 @@ defineProps<{
     transform: translateY(-0.25rem);
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
     color: var(--accent-500);
-    background-color: var(--card);
+    background-color: var(--hover-bg);
   }
 }
 

@@ -20,20 +20,26 @@ useHead({
   --accent-300: #ffdfe7;
   --accent-500: #f06e8e;
   --accent-500-rgb: 240 110 142;
-  --hover-overlay: rgb(0 0 0 / 5%);
-  --hover-overlay-light: rgb(255 255 255 / 15%);
-  --card: rgb(255 255 255 / 10%);
-  --ripple: var(--hover-overlay);
+  --card: white;
+  --hover-bg: var(--card);
   --main-bg: white;
   --neutral: #797173;
+  --neutral-secondary: #ececec;
   --text: #212121;
   --branding-font: Montserrat, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   background-color: var(--main-bg);
   text-autospace: normal;
 
+  background-image:
+    linear-gradient(to right, rgba(127, 127, 127, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(127, 127, 127, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+
   @include dark {
-    --hover-overlay: rgb(255 255 255 / 8%);
-    --card: rgb(255 255 255 / 5%);
+    --hover-bg: rgb(56 56 56);
+    --neutral-secondary: rgb(48 48 48);
+    --card: rgb(48 48 48);
     --main-bg: #212121;
     --neutral: #e5e4e4;
     --text: white;
@@ -125,13 +131,13 @@ pre {
   overflow: auto;
   font-size: 12px;
   line-height: 1.25rem;
-  background-color: var(--hover-overlay);
+  background-color: var(--neutral-secondary);
   padding: 1rem;
   border-radius: 8px;
 }
 
 code:not(pre > code) {
-  background-color: var(--hover-overlay);
+  background-color: var(--neutral-secondary);
   font-size: 12px;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -140,7 +146,7 @@ code:not(pre > code) {
 
 hr {
   height: 1px;
-  color: var(--hover-overlay);
+  color: var(--neutral-secondary);
   background-color: currentColor;
   border: 0;
   font-size: 0;
