@@ -37,6 +37,7 @@ onUnmounted(() => {
 <template>
   <div class="page-container">
     <HomeHeader />
+    <HomeProfile />
     <HomeProjects />
   </div>
 </template>

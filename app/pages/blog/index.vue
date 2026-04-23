@@ -15,13 +15,18 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
 
 <template>
   <div class="page-container">
-    <h2>+ Blog +</h2>
-    <div class="list-container">
-      <ContentList v-slot="{ list }" :query="query" path="/posts">
-        <NuxtLink v-for="article in list" :key="article._path" :to="`/blog/${article.slug}`">
-          <BlogCard :title="article.title" :date="article.date" :description="article.description" />
-        </NuxtLink>
-      </ContentList>
+    <div class="content">
+      <SectionTitle icon="mdi:document">
+        BLOG
+      </SectionTitle>
+
+      <div class="list-container">
+        <ContentList v-slot="{ list }" :query="query" path="/posts">
+          <NuxtLink v-for="article in list" :key="article._path" :to="`/blog/${article.slug}`">
+            <BlogCard :title="article.title" :date="article.date" :description="article.description" />
+          </NuxtLink>
+        </ContentList>
+      </div>
     </div>
   </div>
 </template>
@@ -35,23 +40,19 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
   padding: 3rem 1rem;
 }
 
-h2 {
-  color: var(--accent-500);
-  font-size: 1.5rem;
-  text-align: center;
+.content {
+  max-width: 960px;
+}
+
+.section-title {
   margin: 3rem 0;
   animation: intro 800ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
-
-  @include dark {
-    @include small-text-shadow;
-  }
 }
 
 .list-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 960px;
   width: 100%;
 }
 

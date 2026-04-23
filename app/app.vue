@@ -27,6 +27,7 @@ useHead({
   --main-bg: white;
   --neutral: #797173;
   --text: #212121;
+  --branding-font: Montserrat, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   background-color: var(--main-bg);
   text-autospace: normal;
 
@@ -87,12 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:
-    Montserrat,
-    -apple-system,
-    BlinkMacSystemFont,
-    system-ui,
-    sans-serif;
+  font-family: var(--branding-font);
 }
 
 a {
@@ -123,33 +119,6 @@ a {
 .page-leave-to {
   transform: translateY(-4rem);
   opacity: 0;
-}
-
-/* fallback */
-@font-face {
-  font-weight: 400;
-  font-family: 'Material Icons Round';
-  font-style: normal;
-  font-display: block;
-  src: url('https://fonts.gstatic.com/s/materialiconsround/v108/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmPq_HTTw.woff2')
-    format('woff2');
-}
-
-.material-icons {
-  display: inline-block;
-  font-weight: normal;
-  font-size: 1.5rem;
-  font-family: 'Material Icons Round';
-  font-style: normal;
-  line-height: 1;
-  direction: ltr;
-  letter-spacing: normal;
-  white-space: nowrap;
-  text-transform: none;
-  word-wrap: normal;
-  font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-  user-select: none;
 }
 
 pre {

@@ -4,7 +4,9 @@ useHead({ title: 'Links' })
 
 <template>
   <div class="page-container">
-    <h2>+ Friends' Sites +</h2>
+    <SectionTitle icon="mdi:link">
+      FRIENDS' SITES
+    </SectionTitle>
     <div class="links">
       <FriendLink
         name="lachrymaL" to="https://lachrymal.net"
@@ -55,21 +57,14 @@ useHead({ title: 'Links' })
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
-h2 {
-  color: var(--accent-500);
-  font-size: 1.5rem;
-  text-align: center;
+.section-title {
   animation: link-intro 800ms cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
-
-  @include dark {
-    @include small-text-shadow;
-  }
 }
 
 @keyframes link-intro {
@@ -92,8 +87,7 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem;
   gap: 1rem;
-  width: calc(100% - 2rem);
-  max-width: 960px;
+  width: 100%;
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 20%);
   border-radius: 0.5rem;
   overflow: hidden;

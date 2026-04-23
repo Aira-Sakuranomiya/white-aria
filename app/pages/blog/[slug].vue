@@ -18,7 +18,7 @@ useHead(
   <div class="page-wrapper">
     <div class="page-appbar">
       <NuxtLink to="/blog" class="back">
-        <span class="material-icons">arrow_back</span>
+        <NuxtIcon name="mdi:arrow-left" />
       </NuxtLink>
     </div>
     <article>
@@ -65,6 +65,7 @@ useHead(
       color: var(--neutral);
       animation: back-in 800ms cubic-bezier(0.75, 0, 0, 1) backwards;
       transition: color 0.2s;
+      font-size: 1.5rem;
 
       &:hover {
         color: var(--accent-500);

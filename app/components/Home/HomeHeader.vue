@@ -34,7 +34,7 @@
       </div>
       <SocialButtons />
     </div>
-    <span class="material-icons more">expand_more</span>
+    <NuxtIcon name="mdi:chevron-down" class="more" />
   </div>
 </template>
 

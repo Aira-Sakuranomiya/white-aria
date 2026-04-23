@@ -4,8 +4,6 @@ defineProps<{
   name: string
   icon: string
 }>()
-
-const colored = ref(false)
 </script>
 
 <template>
@@ -22,19 +20,23 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4rem;
-  color: var(--neutral);
+  padding: 2rem;
   transition: 0.2s;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 20%);
+  border-radius: 0.5rem;
+  background-color: var(--card);
 
   &:hover {
-    transform: scale(1.1);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    transform: translateY(-0.5rem);
   }
 }
 
 .icon {
   display: block;
   font-size: unset;
-  width: 100%;
+  width: auto;
   height: 100%;
+  height: 3rem;
 }
 </style>

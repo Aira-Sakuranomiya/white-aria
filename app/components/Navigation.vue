@@ -48,10 +48,10 @@ watch(routeHideLogo, (value) => {
   >
     <div class="bg" />
 
-    <div class="left">
+    <div class="logo">
       <Transition name="logo">
         <NuxtLink v-if="!hideLogo" to="/">
-          <span class="material-icons">local_cafe</span>
+          <NuxtIcon name="mdi:coffee" />
           <span class="site-name">AIRA CAFÉ</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -70,16 +70,12 @@ watch(routeHideLogo, (value) => {
     </div>
 
     <div class="right">
-      <NuxtLink to="/profile">
-        <span class="material-icons">person</span>
-        Profile
-      </NuxtLink>
       <NuxtLink to="/blog">
-        <span class="material-icons">article</span>
+        <NuxtIcon name="mdi:document" />
         Blog
       </NuxtLink>
       <NuxtLink to="/links">
-        <span class="material-icons">link</span>
+        <NuxtIcon name="mdi:link" />
         Links
       </NuxtLink>
     </div>
@@ -147,16 +143,16 @@ $lr-padding: 1rem;
   .site-name {
     @include title-font;
     font-weight: 600;
-    font-size: 1.5rem;
 
     @include phone {
       display: none;
     }
   }
 
-  .left {
+  .logo {
     height: 100%;
     overflow: hidden;
+    font-size: 1.5rem;
 
     a {
       display: flex;
@@ -192,6 +188,10 @@ $lr-padding: 1rem;
       font-weight: 600;
       text-decoration: none;
       transition: color 0.6s;
+
+      svg {
+        font-size: 22px;
+      }
 
       &::before {
         position: absolute;

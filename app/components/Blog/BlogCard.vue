@@ -17,11 +17,10 @@ defineProps<{
     <div class="info">
       <div>
         <div class="info-item">
-          <span class="material-icons">calendar_today</span>
-          <p>{{ date }}</p>
+          <p>// {{ date }}</p>
         </div>
       </div>
-      <span class="material-icons enter">arrow_forward</span>
+      <NuxtIcon name="mdi:arrow-right" class="enter" />
     </div>
   </div>
 </template>
@@ -34,7 +33,7 @@ defineProps<{
   padding: 1rem;
   color: var(--text);
   background-color: var(--card);
-  // box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 20%);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   transition: 0.2s;
 
@@ -74,10 +73,6 @@ defineProps<{
       display: flex;
       align-items: center;
       gap: 0.25rem;
-
-      .material-icons {
-        font-size: 1rem;
-      }
     }
 
     .enter {
