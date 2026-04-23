@@ -27,14 +27,6 @@ useHead({
   --neutral-secondary: #ececec;
   --text: #212121;
   --branding-font: Montserrat, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  background-color: var(--main-bg);
-  text-autospace: normal;
-
-  background-image:
-    linear-gradient(to right, rgba(127, 127, 127, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(127, 127, 127, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-attachment: fixed;
 
   @include dark {
     --hover-bg: rgb(56 56 56);
@@ -44,6 +36,15 @@ useHead({
     --neutral: #e5e4e4;
     --text: white;
   }
+
+  background-color: var(--main-bg);
+  background-image:
+    linear-gradient(to right, rgba(127, 127, 127, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(127, 127, 127, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-attachment: fixed;
+
+  text-autospace: normal;
 }
 
 *,
