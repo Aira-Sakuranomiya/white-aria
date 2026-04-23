@@ -24,7 +24,7 @@ useHead({
   --card: white;
   --hover-bg: var(--card);
   --main-bg: white;
-  --neutral: #797173;
+  --neutral: #797979;
   --neutral-secondary: #ececec;
   --text: #212121;
   --branding-font: Montserrat, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -34,7 +34,7 @@ useHead({
     --neutral-secondary: rgb(48 48 48);
     --card: rgb(48 48 48);
     --main-bg: #212121;
-    --neutral: #e5e4e4;
+    --neutral: #e5e5e5;
     --text: white;
   }
 
@@ -63,9 +63,9 @@ body {
   padding: 0;
   font-size: 1rem;
   font-family:
-    -apple-system, BlinkMacSystemFont, 'Roboto Flex', Roboto, Inter, 'Segoe UI Variable Display', 'Segoe UI', Ubuntu,
-    Cantarell, 'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans CN', 'Microsoft YaHei UI', 'Microsoft YaHei',
-    system-ui, sans-serif;
+    -apple-system, BlinkMacSystemFont, 'HarmonyOS Sans SC', Inter, 'Google Sans Flex', 'Segoe UI Variable Display',
+    'Segoe UI', Ubuntu, Cantarell, 'Roboto Flex', Roboto, 'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans CN',
+    'Microsoft YaHei UI', 'Microsoft YaHei', system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
   // accent-color: var(--accent-500);
 }

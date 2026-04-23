@@ -27,7 +27,7 @@ defineProps<{
 
 .icon-wrapper {
   display: flex;
-  background-color: var(--text);
+  background-color: var(--neutral);
   color: var(--main-bg);
   font-size: 20px;
   padding: 4px;

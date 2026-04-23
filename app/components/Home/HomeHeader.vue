@@ -139,7 +139,8 @@ h1 {
   gap: 0.5em;
   font-size: min(6vw, 4rem);
   font-family:
-    -apple-system, BlinkMacSystemFont, 'Noto Sans CJK JP', 'Noto Sans JP', 'Yu Gothic', system-ui, sans-serif;
+    -apple-system, BlinkMacSystemFont, 'HarmonyOS Sans SC', 'Noto Sans CJK JP', 'Noto Sans JP', 'Yu Gothic', system-ui,
+    sans-serif;
 
   @include small-tablet {
     font-size: 2.5rem;
@@ -164,6 +165,7 @@ h1 {
 
       &.english-name {
         @include title-font;
+        font-weight: 700;
         margin-bottom: -0.5em;
       }
 
