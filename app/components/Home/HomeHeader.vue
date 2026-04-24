@@ -13,6 +13,7 @@
         <NuxtImg
           src="/images/avatar.webp"
           class="avatar" alt="My avatar" referrerpolicy="no-referrer"
+          width="260"
         />
       </div>
     </div>
