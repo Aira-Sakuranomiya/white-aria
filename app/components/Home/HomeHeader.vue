@@ -35,7 +35,10 @@
       </div>
       <SocialButtons />
     </div>
-    <NuxtIcon name="mdi:chevron-down" class="more" />
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <NuxtIcon name="mdi:chevron-down" />
+    </div>
   </div>
 </template>
 
@@ -46,6 +49,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 100vh;
 
   @include small-tablet {
     flex-direction: column;
@@ -192,12 +196,21 @@ h2 {
   }
 }
 
-.more {
+.scroll-hint {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   bottom: 1rem;
-  font-size: 1.5rem;
+  font-family: var(--branding-font);
+  font-weight: 600;
+  font-size: 12px;
   animation: more 1s cubic-bezier(0.1, 0.9, 0.2, 1) 0.6s both;
   color: var(--neutral);
+
+  svg {
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes move-in {
@@ -210,7 +223,7 @@ h2 {
 @keyframes more {
   from {
     opacity: 0;
-    translate: 0 1rem;
+    translate: 0 -2rem;
   }
 }
 

@@ -41,11 +41,3 @@ onUnmounted(() => {
     <HomeProjects />
   </div>
 </template>
-
-<style scoped lang="scss">
-.page-container {
-  > *:nth-child(1) {
-    height: 100vh;
-  }
-}
-</style>
