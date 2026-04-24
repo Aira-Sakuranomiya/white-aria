@@ -48,7 +48,6 @@
 
     <NuxtImg
       src="https://i1.mcobj.com/uploads/20230804_64cbee56379a2.webp" class="side-img" alt="A photo of me"
-      preload
     />
   </section>
 </template>

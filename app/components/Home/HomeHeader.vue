@@ -14,6 +14,7 @@
           src="/images/avatar.webp"
           class="avatar" alt="My avatar" referrerpolicy="no-referrer"
           width="260"
+          :preload="{ fetchPriority: 'high' }"
         />
       </div>
     </div>
