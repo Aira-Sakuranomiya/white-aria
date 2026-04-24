@@ -45,7 +45,7 @@ onUnmounted(() => {
 <style scoped lang="scss">
 .page-container {
   > *:nth-child(1) {
-    height: 100dvh;
+    height: 100vh;
   }
 }
 </style>
