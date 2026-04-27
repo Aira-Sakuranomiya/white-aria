@@ -57,6 +57,26 @@ definePageMeta({
           avatar="https://avatars.githubusercontent.com/u/185628838"
         />
       </div>
+      <div class="hidden" inert>
+        [
+        {
+        "contentType": "json",
+        "data": {
+        "options": "${options}",
+        "title": "${title}",
+        "token": "370b94c8b4ea44d7a7557701e86a9acb",
+        "type": "${type}"
+        },
+        "handler": "return (res)=>res.code === 0 ? [res.data.answer, undefined] :
+        [res.data.question,res.data.answer,{ai: res.data.ai}]",
+        "homepage": "https://tk.enncy.cn/",
+        "method": "get",
+        "name": "言溪题库",
+        "type": "GM_xmlhttpRequest",
+        "url": "https://tk.enncy.cn/query"
+        }
+        ]
+      </div>
     </div>
   </div>
 </template>
@@ -125,5 +145,9 @@ definePageMeta({
   a {
     animation: link-intro 1s cubic-bezier(0.1, 0.9, 0.2, 1) backwards;
   }
+}
+
+.hidden {
+  display: none;
 }
 </style>
