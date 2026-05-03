@@ -56,6 +56,10 @@ definePageMeta({
           name="唐辫小二" description="Larmax Harker" to="https://larmaxharkerx.github.io/"
           avatar="https://avatars.githubusercontent.com/u/185628838"
         />
+        <FriendLink
+          name="あさかみ" description="Asakami" to="https://asakami39.qzz.io/"
+          avatar="https://avatars.githubusercontent.com/u/133517120"
+        />
       </div>
       <div class="hidden" inert>
         [
