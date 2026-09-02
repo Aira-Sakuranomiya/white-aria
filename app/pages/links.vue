@@ -17,48 +17,52 @@ definePageMeta({
       </SectionTitle>
       <div class="links">
         <FriendLink
-          name="lachrymaL" to="https://lachrymal.net"
-          avatar="https://avatars.githubusercontent.com/u/13716477"
-        />
-        <FriendLink
-          name="alivemaster" to="https://yasunaori.be/"
-          avatar="https://avatars.githubusercontent.com/u/21076137"
-        />
-        <FriendLink
-          name="megakite" to="https://megakite.icu"
-          avatar="https://avatars.githubusercontent.com/u/20639794"
-        />
-        <FriendLink
-          name="Akuta Zehy" to="https://akutazehy.github.io"
-          avatar="https://avatars.githubusercontent.com/u/42381419"
-        />
-        <FriendLink
-          name="熊可狸" description="KumaKorin" to="https://korin.im/"
-          avatar="https://i1.mcobj.com/uploads/20210623_b735dde7c665d.jpeg"
-        />
-        <FriendLink
-          name="WZQ'02" to="https://wzq02.top/"
-          avatar="https://avatars.githubusercontent.com/u/52278929"
+          name="菜鸡" description="Yasaitori" to="https://www.yatori.cc/"
+          avatar="https://avatars.githubusercontent.com/u/118044114"
         />
         <FriendLink
           name="哞菇" description="Nekotora" to="https://flag.moe/"
           avatar="https://avatars.githubusercontent.com/u/7263028"
         />
         <FriendLink
-          name="菜鸡" description="Yasaitori" to="https://www.yatori.cc/"
-          avatar="https://avatars.githubusercontent.com/u/118044114"
+          name="唐辫小二" description="Larmax Harker" to="https://larmaxharkerx.github.io/"
+          avatar="https://avatars.githubusercontent.com/u/185628838"
+        />
+        <FriendLink
+          name="熊可狸" description="KumaKorin" to="https://korin.im/"
+          avatar="https://i1.mcobj.com/uploads/20210623_b735dde7c665d.jpeg"
+        />
+        <FriendLink
+          name="あさかみ" description="Asakami" to="https://asakami39.qzz.io/"
+          avatar="https://avatars.githubusercontent.com/u/133517120"
+        />
+        <FriendLink
+          name="Akuta Zehy" to="https://akutazehy.github.io"
+          avatar="https://avatars.githubusercontent.com/u/42381419"
+        />
+        <FriendLink
+          name="alivemaster" to="https://yasunaori.be/"
+          avatar="https://avatars.githubusercontent.com/u/21076137"
         />
         <FriendLink
           name="Hakadao" to="https://hakadao.cc/"
           avatar="https://avatars.githubusercontent.com/u/33394391"
         />
         <FriendLink
-          name="唐辫小二" description="Larmax Harker" to="https://larmaxharkerx.github.io/"
-          avatar="https://avatars.githubusercontent.com/u/185628838"
+          name="lachrymaL" to="https://lachrymal.net"
+          avatar="https://avatars.githubusercontent.com/u/13716477"
         />
         <FriendLink
-          name="あさかみ" description="Asakami" to="https://asakami39.qzz.io/"
-          avatar="https://avatars.githubusercontent.com/u/133517120"
+          name="megakite" to="https://megakite.icu"
+          avatar="https://avatars.githubusercontent.com/u/20639794"
+        />
+        <FriendLink
+          name="WZQ'02" to="https://wzq02.top/"
+          avatar="https://avatars.githubusercontent.com/u/52278929"
+        />
+        <FriendLink
+          name="Ventus Uta" to="https://ventusuta.com/"
+          avatar="https://avatars.githubusercontent.com/u/135337676"
         />
       </div>
       <div class="hidden" inert>
