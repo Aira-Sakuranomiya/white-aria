@@ -1,5 +1,23 @@
 <script setup lang="ts">
-const { slug } = useRoute().params
+const route = useRoute()
+const { data: doc, error } = await useAsyncData(() => `blog-post-${route.params.slug}`, async () => {
+  const post = await queryCollection('posts').where('slug', '=', String(route.params.slug)).first()
+
+  if (!post)
+    throw createError({ statusCode: 404, statusMessage: 'Post not found' })
+
+  return post
+})
+
+watchEffect(() => {
+  if (error.value)
+    showError(error.value)
+})
+
+useSeoMeta({
+  title: () => doc.value?.title,
+  description: () => doc.value?.description,
+})
 
 definePageMeta({
   hideLogo: true,
@@ -21,19 +39,17 @@ useHead(
         <NuxtIcon name="mdi:arrow-left" />
       </NuxtLink>
     </div>
-    <article>
-      <ContentDoc v-slot="{ doc }" :path="`/posts/${slug}`">
-        <div class="title-block">
-          <p class="date">
-            {{ doc.date }}
-          </p>
-          <h2 class="title">
-            {{ doc.title }}
-          </h2>
-          <hr>
-        </div>
-        <ContentRenderer class="content-renderer" :value="doc" />
-      </ContentDoc>
+    <article v-if="doc">
+      <div class="title-block">
+        <p class="date">
+          {{ doc.date }}
+        </p>
+        <h2 class="title">
+          {{ doc.title }}
+        </h2>
+        <hr>
+      </div>
+      <ContentRenderer class="content-renderer" :value="doc" />
     </article>
   </div>
 </template>

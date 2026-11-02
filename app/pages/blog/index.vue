@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content'
-
 definePageMeta({
   layout: {
     props: {
@@ -18,7 +16,11 @@ useHead(
     },
   },
 )
-const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
+const { data: posts, error } = await useAsyncData('blog-posts', () =>
+  queryCollection('posts').order('date', 'DESC').all())
+
+if (error.value)
+  throw createError(error.value)
 </script>
 
 <template>
@@ -29,11 +31,9 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
       </SectionTitle>
 
       <div class="list-container">
-        <ContentList v-slot="{ list }" :query="query" path="/posts">
-          <NuxtLink v-for="article in list" :key="article._path" :to="`/blog/${article.slug}`">
-            <BlogCard :title="article.title" :date="article.date" :description="article.description" />
-          </NuxtLink>
-        </ContentList>
+        <NuxtLink v-for="article in posts" :key="article.id" :to="`/blog/${article.slug}`">
+          <BlogCard :title="article.title" :date="article.date" :description="article.description" />
+        </NuxtLink>
       </div>
     </div>
   </div>
