@@ -64,6 +64,10 @@ definePageMeta({
           name="Ventus Uta" to="https://ventusuta.com/"
           avatar="https://avatars.githubusercontent.com/u/135337676"
         />
+        <FriendLink
+          name="阿蘅仔" description="Cocoa-c" to="https://cocoac.social/"
+          avatar="https://www.cocoac.social/images/avatar.webp"
+        />
       </div>
       <div class="hidden" inert>
         [
