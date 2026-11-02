@@ -182,5 +182,25 @@ article {
     margin-inline: auto;
     max-width: 100%;
   }
+
+  pre.shiki {
+    max-width: 100%;
+
+    span {
+      color: var(--shiki-default);
+      background-color: var(--shiki-default-bg, transparent);
+      font-style: var(--shiki-default-font-style, normal);
+      font-weight: var(--shiki-default-font-weight, normal);
+      text-decoration: var(--shiki-default-text-decoration, none);
+
+      @include dark {
+        color: var(--shiki-dark);
+        background-color: var(--shiki-dark-bg, transparent);
+        font-style: var(--shiki-dark-font-style, normal);
+        font-weight: var(--shiki-dark-font-weight, normal);
+        text-decoration: var(--shiki-dark-text-decoration, none);
+      }
+    }
+  }
 }
 </style>

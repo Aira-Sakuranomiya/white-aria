@@ -8,6 +8,20 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/image', '@nuxt/content', '@vueuse/nuxt', '@nuxt/icon', '@nuxt/eslint', '@nuxt/hints'],
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark',
+          },
+          langs: ['swift'],
+        },
+      },
+    },
+  },
+
   hints: {
     devtools: true,
   },
