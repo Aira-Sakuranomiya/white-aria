@@ -9,22 +9,22 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^8.3.0",
-    "@iconify-json/material-symbols": "^1.2.90",
+    "@antfu/eslint-config": "^10.0.0",
+    "@iconify-json/material-symbols": "^1.2.97",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/tabler": "^1.2.38",
-    "@nuxt/content": "^2.13.4",
-    "@nuxt/eslint": "1.15.2",
-    "@nuxt/hints": "1.0.2",
-    "@nuxt/icon": "2.2.1",
-    "@nuxt/image": "^2.1.0",
-    "@types/node": "^25.9.5",
-    "@vueuse/core": "^14.4.0",
-    "@vueuse/nuxt": "^14.4.0",
-    "eslint": "^10.9.1",
+    "@iconify-json/tabler": "^1.2.43",
+    "@nuxt/content": "2.13.4",
+    "@nuxt/eslint": "1.17.0",
+    "@nuxt/hints": "1.1.5",
+    "@nuxt/icon": "2.6.2",
+    "@nuxt/image": "^2.2.1",
+    "@types/node": "^26.6.6",
+    "@vueuse/core": "^15.0.0",
+    "@vueuse/nuxt": "^15.0.0",
+    "eslint": "^10.14.0",
     "eslint-plugin-format": "^2.0.1",
-    "nuxt": "^4.5.2",
-    "sass": "^1.103.1",
-    "typescript": "^6.0.3"
+    "nuxt": "^4.6.3",
+    "sass": "^1.107.1",
+    "typescript": "^7.0.2"
   }
 }
