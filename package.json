@@ -1,5 +1,6 @@
 {
   "name": "white-aria",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
