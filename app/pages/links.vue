@@ -123,7 +123,7 @@ definePageMeta({
   }
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 16 {
   .links a:nth-of-type(#{$i}) {
     animation-delay: 50ms * ($i - 1);
     animation-duration: 800ms + 20ms * ($i - 1);
